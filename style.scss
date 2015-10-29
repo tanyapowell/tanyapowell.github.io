@@ -21,6 +21,10 @@ $color5: #F4F4F8;
   text-align: center;
 }
 
+img{
+  @include centered;
+}
+
 #home, #project, h1, h2, h3, h4, h5 {
   @include titles;
   color: black;
@@ -42,7 +46,7 @@ $color5: #F4F4F8;
 
 #home, #project, #skills, #contact {
    display: block;
-   text-align: justify;
+   text-align: center;
    padding:50px;
    font-family: $font;
    font-size: large;
@@ -51,6 +55,14 @@ $color5: #F4F4F8;
 .col-md-6 img{
   width: 60%;
   height: 60%;
+}
+
+#main-navbar a {
+  color: $color2;
+}
+
+#main-navbar a:hover {
+  color: #000;
 }
 
 .bg {
@@ -68,7 +80,6 @@ $color5: #F4F4F8;
 .project-img{
   width: 75%;
   height: 75%;
-  padding-left: 75px;
 }
 
 .horizontal li{
