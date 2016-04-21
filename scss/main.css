@@ -1,0 +1,114 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500|Lato:400,700);
+img {
+  margin-left: auto;
+  margin-right: auto; }
+
+h1, h2, h3, h4, h5 {
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  color: black; }
+
+#home {
+  background-image: url("./../img/code1.jpg");
+  background-blend-mode: overlay, darken;
+  background-color: #FE4A49;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; }
+
+#project {
+  background-image: url("./../img/code1.jpg");
+  background-blend-mode: overlay, darken;
+  background-color: #A1D490;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; }
+
+#project p {
+  color: black;
+  font-weight: bold; }
+
+#voluntary {
+  background-image: url("./../img/code1.jpg");
+  background-blend-mode: overlay, darken, color-burn;
+  background-color: #2AB7CA;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; }
+
+#voluntary p {
+  color: black;
+  font-weight: bold; }
+
+#skills, #contact {
+  background-image: url("./../img/code1.jpg");
+  background-blend-mode: overlay, darken, color-burn;
+  background-color: #FED766;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; }
+
+#home a {
+  color: #E6E6EA; }
+
+#home a:hover {
+  color: #2AB7CA;
+  text-decoration: none; }
+
+#home, #voluntary, #project, #skills, #contact {
+  display: block;
+  text-align: center;
+  padding: 50px;
+  font-family: "Raleway", sans-serif;
+  font-size: large; }
+
+.col-md-6 img {
+  width: 60%;
+  height: 60%; }
+
+#main-navbar a {
+  color: #2AB7CA; }
+
+#main-navbar a:hover {
+  color: #000; }
+
+.bg-skill {
+  background-color: #FED766; }
+
+.project-img {
+  width: 75%;
+  height: 75%; }
+
+.empower {
+  width: 25%;
+  height: 25%; }
+
+.horizontal li {
+  display: inline-block;
+  text-decoration: none;
+  padding-right: 25px; }
+
+#portrait {
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  border: solid #FED766 2px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.row {
+  padding-top: 50px; }
+
+.row-proj {
+  padding-top: 20px; }
+
+#footer {
+  color: #fd00ff;
+  background-color: #f5f5f5;
+  width: 100%; }
+
+/*# sourceMappingURL=main.css.map */
