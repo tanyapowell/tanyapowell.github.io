@@ -1,4 +1,52 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,500|Lato:400,700);
+#community {
+  background-color: #2AB7CA; }
+
+#community p {
+  color: black;
+  font-weight: bold; }
+
+.row-flex, .row-flex > div[class*='col-'] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex: 1 1 auto; }
+
+.row-flex-wrap {
+  -webkit-flex-flow: row wrap;
+  align-content: flex-start;
+  flex: 0; }
+
+.row-flex > div[class*='col-'], .container-flex > div[class*='col-'] {
+  margin: -.2px; }
+
+.container-flex > div[class*='col-'] div, .row-flex > div[class*='col-'] div {
+  width: 100%; }
+
+.flex-col {
+  display: flex;
+  display: -webkit-flex;
+  flex: 1 100%;
+  flex-flow: column nowrap; }
+
+.flex-grow {
+  display: flex;
+  -webkit-flex: 2;
+  flex: 2; }
+
+.panel-heading {
+  background-color: white;
+  font-size: h3; }
+
+#talks p {
+  color: black;
+  font-weight: bold; }
+
+#blackgirltech {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); }
+
 img {
   margin-left: auto;
   margin-right: auto; }
@@ -18,39 +66,11 @@ h1, h2, h3, h4, h5 {
   background-size: cover; }
 
 #project {
-  background-image: url("./../img/code1.jpg");
-  background-blend-mode: overlay, darken;
-  background-color: #A1D490;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover; }
+  background-color: #A1D490; }
 
 #project p {
   color: black;
   font-weight: bold; }
-
-#voluntary {
-  background-image: url("./../img/code1.jpg");
-  background-blend-mode: overlay, darken, color-burn;
-  background-color: #2AB7CA;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover; }
-
-#voluntary p {
-  color: black;
-  font-weight: bold; }
-
-#skills, #contact {
-  background-image: url("./../img/code1.jpg");
-  background-blend-mode: overlay, darken, color-burn;
-  background-color: #FED766;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover; }
 
 #home a {
   color: #E6E6EA; }
@@ -59,7 +79,7 @@ h1, h2, h3, h4, h5 {
   color: #2AB7CA;
   text-decoration: none; }
 
-#home, #voluntary, #project, #skills, #contact {
+#home, #community, #talks, #project, #skills, #contact {
   display: block;
   text-align: center;
   padding: 50px;
@@ -79,6 +99,7 @@ h1, h2, h3, h4, h5 {
 .bg-skill {
   background-color: #FED766; }
 
+.vol-img,
 .project-img {
   width: 75%;
   height: 75%; }
