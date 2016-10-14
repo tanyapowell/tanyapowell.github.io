@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css?family=Oxygen|Lora");
+footer {
+  background-color: #191919;
+  bottom: 0;
+  color: #ced0ce;
+  clear: both;
+  position: relative;
+  z-index: 10;
+  margin-top: -5em; }
+  footer ul {
+    list-style: none; }
+  footer li > a {
+    font-family: "Oxygen", sans-serif; }
+
+.sitemap {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2; }
+
+nav {
+  background-color: #191919; }
+  nav a {
+    color: #e6e8e6; }
+
+nav.navbar.navbar-default {
+  display: inline-block; }
+  nav.navbar.navbar-default a {
+    font-family: "Oxygen", sans-serif; }
+  nav.navbar.navbar-default li > a:hover {
+    border-bottom: #f15025; }
+
+button.navbar-toggler {
+  float: right;
+  background-color: #e6e8e6; }
+
+html, body, .page-wrap, #root {
+  height: 100%; }
+
+.page-header {
+  font-family: "Oxygen", sans-serif; }
+
+body {
+  padding-top: 65px; }
+
+body > .page-wrap {
+  height: auto;
+  min-height: 100%; }
+
+.content {
+  display: flex;
+  padding-bottom: 3em;
+  justify-content: center;
+  align-items: center; }
+
+.main-content {
+  font-family: "Lora", serif;
+  padding-bottom: 3em;
+  width: 65%; }
+
+@media (max-width: 994px) {
+  .main-content {
+    width: 85%; } }
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,25 @@
+@import "./_variables";
+
+footer {
+  background-color: $dark-grey;
+  bottom: 0;
+  color: $light-grey;
+  clear: both;
+  position: relative;
+  z-index: 10;
+  margin-top: -5em;
+
+  ul {
+    list-style: none;
+  }
+
+  li > a {
+    font-family: $font-headings;
+  }
+}
+
+.sitemap {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}

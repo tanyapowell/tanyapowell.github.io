@@ -1,0 +1,41 @@
+@import "./_partials/_footer";
+@import "./_partials/_navbar";
+@import "./_partials/_imports";
+@import "./_partials/_variables";
+@import "./_partials/pages/_skills";
+
+html, body, .page-wrap, #root {
+  height: 100%;
+}
+
+.page-header {
+  font-family: $font-headings;
+}
+
+body {
+  padding-top: 65px;
+}
+
+body > .page-wrap {
+  height: auto;
+  min-height: 100%;
+}
+
+.content {
+  display: flex;
+  padding-bottom: 3em;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-content {
+  font-family: $font-body;
+  padding-bottom: 3em;
+  width: 65%;
+}
+
+@media (max-width: 994px) {
+  .main-content {
+    width: 85%;
+  }
+}
