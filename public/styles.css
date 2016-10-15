@@ -6,59 +6,232 @@ footer {
   clear: both;
   position: relative;
   z-index: 10;
-  margin-top: -5em; }
+  margin-top: -5em;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
   footer ul {
     list-style: none; }
-  footer li > a {
+  footer a {
+    color: #ced0ce;
     font-family: "Oxygen", sans-serif; }
+    footer a:hover {
+      -webkit-border-bottom-right-radius: 0;
+      border-bottom-right-radius: 0;
+      -webkit-border-bottom-left-radius: 0;
+      border-bottom-left-radius: 0;
+      background-clip: padding-box;
+      border-bottom: solid 1px #e6e8e6;
+      color: #f45e61;
+      text-decoration: none; }
 
 .sitemap {
   columns: 2;
   -webkit-columns: 2;
   -moz-columns: 2; }
 
-nav {
-  background-color: #191919; }
-  nav a {
-    color: #e6e8e6; }
+.sitemap-title {
+  padding-left: 5em; }
 
-nav.navbar.navbar-default {
-  display: inline-block; }
-  nav.navbar.navbar-default a {
+.active {
+  border-bottom: solid 1px #f45e61; }
+
+nav {
+  background-color: #191919;
+  display: block; }
+  nav a {
+    color: #e6e8e6;
     font-family: "Oxygen", sans-serif; }
-  nav.navbar.navbar-default li > a:hover {
-    border-bottom: #f15025; }
+    nav a:hover {
+      -webkit-border-bottom-right-radius: 0;
+      border-bottom-right-radius: 0;
+      -webkit-border-bottom-left-radius: 0;
+      border-bottom-left-radius: 0;
+      background-clip: padding-box;
+      border-bottom: solid 1px #e6e8e6;
+      color: #f45e61;
+      text-decoration: none; }
+    nav a.navbar-brand {
+      color: #f45e61; }
+      nav a.navbar-brand:hover {
+        color: #e6e8e6;
+        border-bottom: solid 1px #f45e61; }
 
 button.navbar-toggler {
   float: right;
   background-color: #e6e8e6; }
 
+button {
+  background: none;
+  border: 0;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 0 2px #f45e61;
+  color: #f45e61;
+  font-size: inherit;
+  font-weight: 700;
+  margin: 1em;
+  padding: 1em 2em;
+  text-align: center;
+  text-transform: capitalize;
+  position: relative;
+  vertical-align: middle; }
+  button::before, button::after {
+    box-sizing: border-box;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%; }
+
+.draw {
+  transition: color 0.25s; }
+  .draw::before, .draw::after {
+    border: 2px solid transparent;
+    width: 0;
+    height: 0; }
+  .draw::before {
+    top: 0;
+    left: 0; }
+  .draw::after {
+    bottom: 0;
+    right: 0; }
+  .draw:hover {
+    color: #60daaa; }
+  .draw:hover::before, .draw:hover::after {
+    width: 100%;
+    height: 100%; }
+  .draw:hover::before {
+    border-top-color: #60daaa;
+    border-right-color: #60daaa;
+    transition: width 0.25s ease-out, height 0.25s ease-out 0.25s; }
+  .draw:hover::after {
+    border-bottom-color: #60daaa;
+    border-left-color: #60daaa;
+    transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s; }
+
+.meet:hover {
+  color: #fbca67; }
+.meet::after {
+  top: 0;
+  left: 0; }
+.meet:hover::before {
+  border-top-color: #fbca67;
+  border-right-color: #fbca67; }
+.meet:hover::after {
+  border-bottom-color: #fbca67;
+  border-left-color: #fbca67;
+  transition: height 0.25s ease-out, width 0.25s ease-out 0.25s; }
+
+#about-background {
+  background-image: url("./../img/code1.jpg");
+  background-blend-mode: overlay, darken;
+  background-color: #e6e8e6;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; }
+
+.img-circle {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #f45e61; }
+
+#contact-background {
+  background-image: url("./../img/writing.jpg");
+  background-blend-mode: overlay, darken;
+  background-color: #e6e8e6;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; }
+
+h5 > a {
+  color: #f45e61; }
+  h5 > a:hover {
+    border-bottom: solid 1px #f45e61;
+    color: #f45e61;
+    text-decoration: none; }
+
+#community-background {
+  background-image: url("./../img/community.jpg");
+  background-blend-mode: overlay, darken;
+  background-color: #e6e8e6;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; }
+
+.skills ul {
+  list-style: none; }
+
+.skillsList {
+  columns: 3;
+  -webkit-columns: 3;
+  -moz-columns: 3; }
+
+#photography-background {
+  background-image: url("./../img/camera.jpg");
+  background-blend-mode: overlay, darken;
+  background-color: #e6e8e6;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; }
+
+#about-background, #community-background,
+#contact-background, #skills-background,
+#speaking-background, #photography-background,
+#portfolio-background {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.about, .community,
+.contact, .skills,
+.speaking, .photography,
+.portfolio {
+  padding-bottom: 3em;
+  padding-top: 3em;
+  width: 65%; }
+  @media (max-width: 64.375em) {
+    .about, .community,
+    .contact, .skills,
+    .speaking, .photography,
+    .portfolio {
+      width: 60%; } }
+  @media (max-width: 50em) {
+    .about, .community,
+    .contact, .skills,
+    .speaking, .photography,
+    .portfolio {
+      width: 80%; } }
+  @media (max-width: 37.5em) {
+    .about, .community,
+    .contact, .skills,
+    .speaking, .photography,
+    .portfolio {
+      width: 95%; } }
+
 html, body, .page-wrap, #root {
   height: 100%; }
 
 .page-header {
-  font-family: "Oxygen", sans-serif; }
+  font-family: "Oxygen", sans-serif;
+  text-align: center;
+  padding-bottom: 3em; }
 
 body {
-  padding-top: 65px; }
+  padding-top: 50px; }
 
 body > .page-wrap {
   height: auto;
   min-height: 100%; }
 
-.content {
-  display: flex;
-  padding-bottom: 3em;
-  justify-content: center;
-  align-items: center; }
+div.container-fluid {
+  padding: 0; }
 
-.main-content {
+.wrapper {
   font-family: "Lora", serif;
-  padding-bottom: 3em;
-  width: 65%; }
-
-@media (max-width: 994px) {
-  .main-content {
-    width: 85%; } }
+  padding-bottom: 3em; }
 
 /*# sourceMappingURL=styles.css.map */

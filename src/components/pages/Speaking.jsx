@@ -12,8 +12,14 @@ export default class Speaking extends React.Component {
     });
 
     return (
-      <div>
-        <PageHeader>Talks</PageHeader>
+      <div id="speaking-background">
+        <div className="speaking">
+          <PageHeader>Talks</PageHeader>
+          <p>Tart cupcake marshmallow powder powder ice cream. Pastry bear claw marzipan sugar plum tart powder biscuit. Wafer dragée gummies cookie brownie cotton candy lemon drops. Brownie donut gingerbread cake dessert.</p>
+          <ul className="skillsList">
+            { displayTalks }
+          </ul>
+        </div>
       </div>
     );
   }

@@ -32,10 +32,10 @@ export default class Footer extends React.Component {
         <hr/>
         <div className="container">
           <div className="row flex-items-md-bottom flex-items-sm-bottom flex-items-xs-bottom">
-            <div className="col-md-8 col-sm-8 col-xs-8">
+            <div className="col-md-8 col-sm-8 col-xs-8 sitemap-title">
               { about.sitemapTitle }
             </div>
-            <div className="col-md-4 col-sm-4 col-xs-4">
+            <div className="col-md-4 col-sm-4 col-xs-4 sitemap-title">
               { about.sitemapContact }
             </div>
           </div>

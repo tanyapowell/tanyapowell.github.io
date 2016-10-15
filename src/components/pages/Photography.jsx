@@ -5,7 +5,13 @@ export default class Photography extends React.Component {
 
   render() {
     return (
-      <PageHeader>Photography</PageHeader>
+      <div id="photography-background">
+        <div className="photography">
+          <PageHeader>Photography</PageHeader>
+          <p>Tart cupcake marshmallow powder powder ice cream. Pastry bear claw marzipan sugar plum tart powder biscuit. Wafer dragée gummies cookie brownie cotton candy lemon drops. Brownie donut gingerbread cake dessert.</p>
+        </div>
+      </div>
+
     );
   }
 }

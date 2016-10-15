@@ -44097,12 +44097,12 @@ var Footer = function (_React$Component) {
             { className: 'row flex-items-md-bottom flex-items-sm-bottom flex-items-xs-bottom' },
             _react2.default.createElement(
               'div',
-              { className: 'col-md-8 col-sm-8 col-xs-8' },
+              { className: 'col-md-8 col-sm-8 col-xs-8 sitemap-title' },
               _content.about.sitemapTitle
             ),
             _react2.default.createElement(
               'div',
-              { className: 'col-md-4 col-sm-4 col-xs-4' },
+              { className: 'col-md-4 col-sm-4 col-xs-4 sitemap-title' },
               _content.about.sitemapContact
             )
           ),
@@ -44194,10 +44194,10 @@ var Layout = function (_React$Component) {
         _react2.default.createElement(_Nav2.default, null),
         _react2.default.createElement(
           'div',
-          { className: 'content container-fluid' },
+          { className: 'container-fluid' },
           _react2.default.createElement(
             'div',
-            { className: 'main-content' },
+            { className: 'wrapper' },
             this.props.children
           )
         ),
@@ -44432,44 +44432,32 @@ var About = function (_React$Component) {
   _createClass(About, [{
     key: 'render',
     value: function render() {
-      // const displaySocial = Object.keys(social).map((key, index) => {
-      //   return (
-      //     <li key={index}>
-      //       <Link to={'/' + key}><small>{social[key]}</small></Link>
-      //     </li>
-      //   );
-      // });
-
-      var getWords = function getWords() {
-        var words = [' a software engineer', 'a speaker', 'inclusive'];
-        var index = 0;
-
-        setInterval(function () {
-          if (index === words.length) {
-            index = 0;
-          }
-        }, 5000);
-      };
-
       return _react2.default.createElement(
         'div',
         null,
         _react2.default.createElement(
-          _reactBootstrap.PageHeader,
-          null,
-          'Tanya is ',
-          getWords
-        ),
-        _react2.default.createElement(_reactBootstrap.Image, { src: _content.about.headshot, thumbnail: true }),
-        _react2.default.createElement(
-          'p',
-          null,
-          _content.about.infoOne
-        ),
-        _react2.default.createElement(
-          'p',
-          null,
-          _content.about.infoTwo
+          'div',
+          { id: 'about-background' },
+          _react2.default.createElement(
+            'div',
+            { className: 'about' },
+            _react2.default.createElement(
+              _reactBootstrap.PageHeader,
+              null,
+              'Tanya is '
+            ),
+            _react2.default.createElement(_reactBootstrap.Image, { src: _content.about.headshot, circle: true }),
+            _react2.default.createElement(
+              'p',
+              null,
+              _content.about.infoOne
+            ),
+            _react2.default.createElement(
+              'p',
+              null,
+              _content.about.infoTwo
+            )
+          )
         ),
         _react2.default.createElement(_Skills2.default, null),
         _react2.default.createElement(_Community2.default, null),
@@ -44531,16 +44519,35 @@ var Community = function (_React$Component) {
 
       return _react2.default.createElement(
         'div',
-        null,
+        { id: 'community-background' },
         _react2.default.createElement(
-          _reactBootstrap.PageHeader,
-          null,
-          'Open Source Communities'
-        ),
-        _react2.default.createElement(
-          'ul',
-          null,
-          displayCommunities
+          'div',
+          { className: 'community' },
+          _react2.default.createElement(
+            _reactBootstrap.PageHeader,
+            null,
+            'Open Source Communities'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'Tart cupcake marshmallow powder powder ice cream. Pastry bear claw marzipan sugar plum tart powder biscuit. Wafer drag\xE9e gummies cookie brownie cotton candy lemon drops. Brownie donut gingerbread cake dessert.'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'Tootsie roll tootsie roll dessert marshmallow. Oat cake gummi bears donut jelly-o powder sweet muffin. Carrot cake souffl\xE9 wafer biscuit cupcake pie muffin cake sweet.'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'Tart marzipan caramels apple pie toffee biscuit donut. Dessert cotton candy candy canes. Donut chocolate cake halvah. Bonbon candy pastry danish cake macaroon chocolate.'
+          ),
+          _react2.default.createElement(
+            'ul',
+            { className: 'skillsList' },
+            displayCommunities
+          )
         )
       );
     }
@@ -44606,55 +44613,59 @@ var Contact = function (_React$Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        null,
+        { id: 'contact-background' },
         _react2.default.createElement(
-          _reactBootstrap.PageHeader,
-          null,
-          'Get in touch with me'
-        ),
-        _react2.default.createElement(
-          'p',
-          null,
-          'I usually respond quicker to a ',
+          'div',
+          { className: 'contact' },
           _react2.default.createElement(
-            'a',
-            { href: _content.socialUrls.twitterLink },
-            'tweet'
-          ),
-          ' but if your message is longer than 140 characters feel free to drop me a message here and I\'ll get back you to as soon as I can \uD83D\uDE0A'
-        ),
-        _react2.default.createElement(
-          'form',
-          { action: 'https://formspree.io/hello@tanyapowell.co.uk', method: 'POST' },
-          _react2.default.createElement(
-            _reactBootstrap.FormGroup,
-            {
-              controlId: 'formBasicText',
-              validationState: this.getValidationState()
-            },
-            _react2.default.createElement(
-              'label',
-              { htmlFor: 'name' },
-              'Name:'
-            ),
-            _react2.default.createElement('input', { type: 'text', name: 'name', className: 'form-control', id: 'name', placeholder: 'Bob Smith', required: true }),
-            _react2.default.createElement(
-              'label',
-              { htmlFor: 'email' },
-              'Email:'
-            ),
-            _react2.default.createElement('input', { type: 'email', name: '_replyto', className: 'form-control', id: 'email', placeholder: 'bob@smith.com', required: true }),
-            _react2.default.createElement(
-              'label',
-              { htmlFor: 'comment' },
-              'Comment:'
-            ),
-            _react2.default.createElement('textarea', { name: 'comment', className: 'form-control', rows: '5', id: 'comment', placeholder: 'Enter you message here', required: true })
+            _reactBootstrap.PageHeader,
+            null,
+            'Get in touch with me'
           ),
           _react2.default.createElement(
-            'button',
-            { type: 'submit', className: 'btn btn-default' },
-            'Submit'
+            'h5',
+            null,
+            'I usually respond quicker to a ',
+            _react2.default.createElement(
+              'a',
+              { href: _content.socialUrls.twitterLink },
+              'tweet'
+            ),
+            ' but if your message is longer than 140 characters feel free to drop me a message here and I\'ll get back you to as soon as I can \uD83D\uDE0A'
+          ),
+          _react2.default.createElement(
+            'form',
+            { action: 'https://formspree.io/hello@tanyapowell.co.uk', method: 'POST' },
+            _react2.default.createElement(
+              _reactBootstrap.FormGroup,
+              {
+                controlId: 'formBasicText',
+                validationState: this.getValidationState()
+              },
+              _react2.default.createElement(
+                'label',
+                { htmlFor: 'name' },
+                'Name:'
+              ),
+              _react2.default.createElement('input', { type: 'text', name: 'name', className: 'form-control', id: 'name', placeholder: 'e.g. Bob Smith', required: true }),
+              _react2.default.createElement(
+                'label',
+                { htmlFor: 'email' },
+                'Email:'
+              ),
+              _react2.default.createElement('input', { type: 'email', name: '_replyto', className: 'form-control', id: 'email', placeholder: 'e.g. bob@smith.com', required: true }),
+              _react2.default.createElement(
+                'label',
+                { htmlFor: 'comment' },
+                'Comment:'
+              ),
+              _react2.default.createElement('textarea', { name: 'comment', className: 'form-control', rows: '5', id: 'comment', placeholder: 'Enter you message here', required: true })
+            ),
+            _react2.default.createElement(
+              'button',
+              { type: 'submit', className: 'btn btn-default' },
+              'Submit'
+            )
           )
         )
       );
@@ -44702,9 +44713,22 @@ var Photography = function (_React$Component) {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        _reactBootstrap.PageHeader,
-        null,
-        'Photography'
+        'div',
+        { id: 'photography-background' },
+        _react2.default.createElement(
+          'div',
+          { className: 'photography' },
+          _react2.default.createElement(
+            _reactBootstrap.PageHeader,
+            null,
+            'Photography'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'Tart cupcake marshmallow powder powder ice cream. Pastry bear claw marzipan sugar plum tart powder biscuit. Wafer drag\xE9e gummies cookie brownie cotton candy lemon drops. Brownie donut gingerbread cake dessert.'
+          )
+        )
       );
     }
   }]);
@@ -44750,9 +44774,22 @@ var Portfolio = function (_React$Component) {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        _reactBootstrap.PageHeader,
-        null,
-        'Projects'
+        'div',
+        { id: 'portfolio-background' },
+        _react2.default.createElement(
+          'div',
+          { className: 'portfolio' },
+          _react2.default.createElement(
+            _reactBootstrap.PageHeader,
+            null,
+            'Projects'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'Tart cupcake marshmallow powder powder ice cream. Pastry bear claw marzipan sugar plum tart powder biscuit. Wafer drag\xE9e gummies cookie brownie cotton candy lemon drops. Brownie donut gingerbread cake dessert.'
+          )
+        )
       );
     }
   }]);
@@ -44799,6 +44836,10 @@ var Skills = function (_React$Component) {
   _createClass(Skills, [{
     key: 'render',
     value: function render() {
+      var handleClick = function handleClick() {
+        window.location.href = _content.socialUrls.linkedinLink;
+      };
+
       var displaySkills = Object.keys(_content.skills).map(function (key, index) {
         return _react2.default.createElement(
           'li',
@@ -44809,16 +44850,30 @@ var Skills = function (_React$Component) {
 
       return _react2.default.createElement(
         'div',
-        { className: 'skills' },
+        { id: 'skills-background' },
         _react2.default.createElement(
-          _reactBootstrap.PageHeader,
-          null,
-          'Skills'
-        ),
-        _react2.default.createElement(
-          'ul',
-          null,
-          displaySkills
+          'div',
+          { className: 'skills' },
+          _react2.default.createElement(
+            _reactBootstrap.PageHeader,
+            null,
+            'Skills'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'Tart cupcake marshmallow powder powder ice cream. Pastry bear claw marzipan sugar plum tart powder biscuit. Wafer drag\xE9e gummies cookie brownie cotton candy lemon drops. Brownie donut gingerbread cake dessert.'
+          ),
+          _react2.default.createElement(
+            'ul',
+            { className: 'skillsList' },
+            displaySkills
+          ),
+          _react2.default.createElement(
+            _reactBootstrap.Button,
+            { bsSize: 'large', onClick: handleClick, className: 'draw meet' },
+            'Connect with me'
+          )
         )
       );
     }
@@ -44876,11 +44931,25 @@ var Speaking = function (_React$Component) {
 
       return _react2.default.createElement(
         'div',
-        null,
+        { id: 'speaking-background' },
         _react2.default.createElement(
-          _reactBootstrap.PageHeader,
-          null,
-          'Talks'
+          'div',
+          { className: 'speaking' },
+          _react2.default.createElement(
+            _reactBootstrap.PageHeader,
+            null,
+            'Talks'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'Tart cupcake marshmallow powder powder ice cream. Pastry bear claw marzipan sugar plum tart powder biscuit. Wafer drag\xE9e gummies cookie brownie cotton candy lemon drops. Brownie donut gingerbread cake dessert.'
+          ),
+          _react2.default.createElement(
+            'ul',
+            { className: 'skillsList' },
+            displayTalks
+          )
         )
       );
     }

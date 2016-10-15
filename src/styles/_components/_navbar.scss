@@ -1,0 +1,36 @@
+@import "../_partials/_variables", "../_partials/_mixins";
+
+.active {
+  border-bottom: solid 1px $orange;
+}
+
+nav {
+  background-color: $dark-grey;
+  display: block;
+
+  a {
+    color: $aqua-spring;
+    font-family: $font-headings;
+
+    &:hover {
+      @include border-bottom-radius(0);
+      border-bottom: solid 1px $aqua-spring;
+      color: $orange;
+      text-decoration: none;
+    }
+
+    &.navbar-brand {
+      color: $orange;
+
+      &:hover {
+        color: $aqua-spring;
+        border-bottom: solid 1px $orange;
+      }
+    }
+  }
+}
+
+button.navbar-toggler {
+  float: right;
+  background-color: $aqua-spring;
+}

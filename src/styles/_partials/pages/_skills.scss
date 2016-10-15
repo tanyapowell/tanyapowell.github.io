@@ -1,13 +1,17 @@
-.skills ul li {
-  // display: inline;
-  // padding-right: 1em;
+@import "./../_variables";
+
+#skills-background {
+  // background-color: $orange;
 }
 
-@media (max-width: 994px) {
-  .skills ul li {
-    // display: inline;
-    // padding-right: 1em;
-    // width: 100%;
-    // height: 100%;
+.skills {
+  ul {
+    list-style: none;
   }
+}
+
+.skillsList {
+  columns: 3;
+  -webkit-columns: 3;
+  -moz-columns: 3;
 }

@@ -1,0 +1,21 @@
+@import "./../_variables", "./../_mixins";
+
+#contact-background {
+  background-image: url("./../img/writing.jpg");
+  background-blend-mode: overlay, darken;
+  background-color: $aqua-spring;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+h5 > a {
+  color: $orange;
+
+  &:hover {
+    border-bottom: solid 1px $orange;
+    color: $orange;
+    text-decoration: none;
+  }
+}

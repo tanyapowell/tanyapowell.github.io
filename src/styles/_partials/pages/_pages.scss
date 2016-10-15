@@ -1,0 +1,23 @@
+@import "./../_variables", "./_about", "./_contact", "./community",
+        "./_skills", "./_speaking", "./photography","./_portfolio";
+
+#about-background, #community-background,
+#contact-background, #skills-background,
+#speaking-background, #photography-background,
+#portfolio-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about, .community,
+.contact, .skills,
+.speaking, .photography,
+.portfolio {
+  padding-bottom: 3em;
+  padding-top: 3em;
+  width: 65%;
+  @include breakpoint(large) { width: 60%; }
+  @include breakpoint(medium) { width: 80%; }
+  @include breakpoint(small) { width: 95%; }
+}

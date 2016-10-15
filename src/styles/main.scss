@@ -1,8 +1,6 @@
-@import "./_partials/_footer";
-@import "./_partials/_navbar";
-@import "./_partials/_imports";
-@import "./_partials/_variables";
-@import "./_partials/pages/_skills";
+@import "_components/_footer", "_components/_navbar", "_components/_buttons",
+        "_partials/_imports", "_partials/_variables", "_partials/pages/_pages",
+        "_partials/_mixins";
 
 html, body, .page-wrap, #root {
   height: 100%;
@@ -10,10 +8,12 @@ html, body, .page-wrap, #root {
 
 .page-header {
   font-family: $font-headings;
+  text-align: center;
+  padding-bottom: 3em;
 }
 
 body {
-  padding-top: 65px;
+  padding-top: 50px;
 }
 
 body > .page-wrap {
@@ -21,21 +21,11 @@ body > .page-wrap {
   min-height: 100%;
 }
 
-.content {
-  display: flex;
-  padding-bottom: 3em;
-  justify-content: center;
-  align-items: center;
+div.container-fluid {
+  padding: 0;
 }
 
-.main-content {
+.wrapper {
   font-family: $font-body;
   padding-bottom: 3em;
-  width: 65%;
-}
-
-@media (max-width: 994px) {
-  .main-content {
-    width: 85%;
-  }
 }

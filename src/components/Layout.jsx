@@ -14,8 +14,8 @@ export default class Layout extends React.Component {
     return (
       <div className="page-wrap">
         <Nav />
-        <div className="content container-fluid">
-          <div className="main-content">
+        <div className="container-fluid">
+          <div className="wrapper">
             { this.props.children }
           </div>
         </div>

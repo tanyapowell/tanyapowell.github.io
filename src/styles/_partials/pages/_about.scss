@@ -1,0 +1,18 @@
+@import "./../_variables";
+
+#about-background {
+  background-image: url("./../img/code1.jpg");
+  background-blend-mode: overlay, darken;
+  background-color: $aqua-spring;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.img-circle {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid $orange;
+}
