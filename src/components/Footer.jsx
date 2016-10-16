@@ -15,14 +15,26 @@ export default class Footer extends React.Component {
 
     const displaySocial = Object.keys(social).map((key, index) => {
       let urls;
+      let fontAwesomeLogo;
       for (const value in socialUrls) {
         if (socialUrls.hasOwnProperty(value)) {
           urls = socialUrls[value];
+          if (value === 'twitterLink') {
+            fontAwesomeLogo = 'fa-twitter';
+          } else if (value === 'githubLink') {
+            fontAwesomeLogo = 'fa-github';
+          } else {
+            fontAwesomeLogo = 'fa-linkedin';
+          }
         }
+        console.log('font awesome', fontAwesomeLogo, 'social', urls);
       }
       return (
-        <li key={index}>
-          <a href={ urls }><small>{ social[key] }</small></a>
+        <li key={ index }>
+          <a href={ urls }>
+            <i className={'fa ' + fontAwesomeLogo} aria-hidden="true"/>
+            <small> { social[key] }</small>
+            </a>
         </li>
       );
     });
@@ -53,6 +65,7 @@ export default class Footer extends React.Component {
             </div>
           </div>
         </div>
+        <i className="fa fa-copyright" aria-hidden="true"> Tanya Powell 2016</i>
       </footer>
       );
   }

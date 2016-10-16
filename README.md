@@ -1,8 +1,9 @@
-# Official Tanya Powell static website
+# Tanya Powell portfolio website
 
-#Tech Stack
-This static website is generated with `Jekyll` and made with plain old HTML and SCSS
+### How is this site built?
+This statically served website that lives here on [Github](https://github.com)
 
-- For ease of use when making SASS changes use `sass --watch`
-- Images hosted on [Amazon S3](https://aws.amazon.com/s3/)
-- The static pages are hosted here on [Github](https://github.com)
+#### Styling
+- For ease of use when making SASS changes use `sass --watch src/styles/main.scss:public/styles.css`
+
+`npm run deploy`

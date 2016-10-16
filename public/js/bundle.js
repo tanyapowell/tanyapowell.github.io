@@ -44065,10 +44065,19 @@ var Footer = function (_React$Component) {
 
       var displaySocial = Object.keys(_content.social).map(function (key, index) {
         var urls = void 0;
+        var fontAwesomeLogo = void 0;
         for (var value in _content.socialUrls) {
           if (_content.socialUrls.hasOwnProperty(value)) {
             urls = _content.socialUrls[value];
+            if (value === 'twitterLink') {
+              fontAwesomeLogo = 'fa-twitter';
+            } else if (value === 'githubLink') {
+              fontAwesomeLogo = 'fa-github';
+            } else {
+              fontAwesomeLogo = 'fa-linkedin';
+            }
           }
+          console.log('font awesome', fontAwesomeLogo, 'social', urls);
         }
         return _react2.default.createElement(
           'li',
@@ -44076,9 +44085,11 @@ var Footer = function (_React$Component) {
           _react2.default.createElement(
             'a',
             { href: urls },
+            _react2.default.createElement('i', { className: 'fa ' + fontAwesomeLogo, 'aria-hidden': 'true' }),
             _react2.default.createElement(
               'small',
               null,
+              ' ',
               _content.social[key]
             )
           )
@@ -44137,6 +44148,11 @@ var Footer = function (_React$Component) {
               )
             )
           )
+        ),
+        _react2.default.createElement(
+          'i',
+          { className: 'fa fa-copyright', 'aria-hidden': 'true' },
+          ' Tanya Powell 2016'
         )
       );
     }
@@ -44446,7 +44462,7 @@ var About = function (_React$Component) {
               null,
               'Tanya is '
             ),
-            _react2.default.createElement(_reactBootstrap.Image, { src: _content.about.headshot, circle: true }),
+            _react2.default.createElement(_reactBootstrap.Image, { src: _content.about.headshot, alt: 'Tanya Powell', circle: true }),
             _react2.default.createElement(
               'p',
               null,
@@ -44727,6 +44743,16 @@ var Photography = function (_React$Component) {
             'p',
             null,
             'Tart cupcake marshmallow powder powder ice cream. Pastry bear claw marzipan sugar plum tart powder biscuit. Wafer drag\xE9e gummies cookie brownie cotton candy lemon drops. Brownie donut gingerbread cake dessert.'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'Tootsie roll tootsie roll dessert marshmallow. Oat cake gummi bears donut jelly-o powder sweet muffin. Carrot cake souffl\xE9 wafer biscuit cupcake pie muffin cake sweet.'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'Tart marzipan caramels apple pie toffee biscuit donut. Dessert cotton candy candy canes. Donut chocolate cake halvah. Bonbon candy pastry danish cake macaroon chocolate.'
           )
         )
       );
@@ -44787,7 +44813,17 @@ var Portfolio = function (_React$Component) {
           _react2.default.createElement(
             'p',
             null,
-            'Tart cupcake marshmallow powder powder ice cream. Pastry bear claw marzipan sugar plum tart powder biscuit. Wafer drag\xE9e gummies cookie brownie cotton candy lemon drops. Brownie donut gingerbread cake dessert.'
+            'Cake fruitcake dessert muffin. Pastry croissant sweet carrot cake icing icing. Oat cake icing gummi bears jelly-o cake ice cream tart cupcake chupa chups. Biscuit liquorice cupcake jelly beans. Chupa chups cupcake sesame snaps cookie jelly beans fruitcake. Jujubes marshmallow chupa chups biscuit pastry. Donut biscuit pastry cheesecake. Cupcake cookie sweet roll oat cake tart caramels tootsie roll. Dessert gingerbread chocolate apple pie souffl\xE9 tootsie roll cheesecake lollipop. Marzipan oat cake biscuit lemon drops drag\xE9e carrot cake pie caramels icing. Sugar plum topping gingerbread. Toffee chupa chups bonbon drag\xE9e macaroon. Cupcake cheesecake cake bonbon fruitcake brownie cookie jelly beans pudding.'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'Sweet roll chupa chups cookie cheesecake cookie gummies. Cheesecake pudding oat cake marzipan sweet cake cake. Apple pie brownie wafer souffl\xE9 sesame snaps tootsie roll jelly ice cream. Cupcake candy canes ice cream chupa chups fruitcake souffl\xE9 pudding muffin. Carrot cake topping cake. Chocolate cake gummi bears tootsie roll. Cake sesame snaps macaroon sweet roll bonbon lollipop lollipop chocolate jujubes. Fruitcake cupcake chupa chups jelly bear claw chupa chups marzipan jujubes bear claw. Topping bonbon bear claw. Marshmallow pie tart. Jelly-o sweet tart souffl\xE9 lemon drops sugar plum pudding danish souffl\xE9. Lollipop gummi bears ice cream sweet.'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'Carrot cake tart jelly beans macaroon. Powder halvah icing icing. Macaroon wafer brownie. Lollipop tiramisu cookie caramels macaroon. Cake wafer chocolate bar chocolate. Ice cream caramels sesame snaps chocolate dessert jelly. Oat cake pastry dessert danish jelly beans sugar plum dessert croissant cupcake. Powder wafer ice cream. Pastry topping marshmallow chocolate croissant muffin. Chupa chups sweet muffin tiramisu lollipop cake brownie liquorice sweet. Pie wafer lollipop chocolate cake donut gingerbread topping carrot cake chocolate cake. Chocolate brownie cupcake cheesecake souffl\xE9 sugar plum bear claw. Cake sweet roll muffin carrot cake icing sugar plum sweet roll gummi bears. Danish topping souffl\xE9 powder ice cream candy gummi bears.'
           )
         )
       );
@@ -44863,6 +44899,16 @@ var Skills = function (_React$Component) {
             'p',
             null,
             'Tart cupcake marshmallow powder powder ice cream. Pastry bear claw marzipan sugar plum tart powder biscuit. Wafer drag\xE9e gummies cookie brownie cotton candy lemon drops. Brownie donut gingerbread cake dessert.'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'Tootsie roll tootsie roll dessert marshmallow. Oat cake gummi bears donut jelly-o powder sweet muffin. Carrot cake souffl\xE9 wafer biscuit cupcake pie muffin cake sweet.'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'Tart marzipan caramels apple pie toffee biscuit donut. Dessert cotton candy candy canes. Donut chocolate cake halvah. Bonbon candy pastry danish cake macaroon chocolate.'
           ),
           _react2.default.createElement(
             'ul',
@@ -44944,6 +44990,16 @@ var Speaking = function (_React$Component) {
             'p',
             null,
             'Tart cupcake marshmallow powder powder ice cream. Pastry bear claw marzipan sugar plum tart powder biscuit. Wafer drag\xE9e gummies cookie brownie cotton candy lemon drops. Brownie donut gingerbread cake dessert.'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'Tootsie roll tootsie roll dessert marshmallow. Oat cake gummi bears donut jelly-o powder sweet muffin. Carrot cake souffl\xE9 wafer biscuit cupcake pie muffin cake sweet.'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'Tart marzipan caramels apple pie toffee biscuit donut. Dessert cotton candy candy canes. Donut chocolate cake halvah. Bonbon candy pastry danish cake macaroon chocolate.'
           ),
           _react2.default.createElement(
             'ul',

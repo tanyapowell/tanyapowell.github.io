@@ -15,7 +15,7 @@ export default class About extends React.Component {
         <div id="about-background">
           <div className="about">
             <PageHeader>Tanya is </PageHeader>
-            <Image src={ about.headshot } circle/>
+            <Image src={ about.headshot } alt="Tanya Powell" circle/>
             <p>{ about.infoOne }</p>
             <p>{ about.infoTwo }</p>
           </div>
