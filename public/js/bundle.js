@@ -44023,6 +44023,8 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactBootstrap = require('react-bootstrap');
+
 var _reactRouter = require('react-router');
 
 var _content = require('../content/content.js');
@@ -44064,33 +44066,18 @@ var Footer = function (_React$Component) {
       });
 
       var displaySocial = Object.keys(_content.social).map(function (key, index) {
-        var urls = void 0;
-        var fontAwesomeLogo = void 0;
-        for (var value in _content.socialUrls) {
-          if (_content.socialUrls.hasOwnProperty(value)) {
-            urls = _content.socialUrls[value];
-            if (value === 'twitterLink') {
-              fontAwesomeLogo = 'fa-twitter';
-            } else if (value === 'githubLink') {
-              fontAwesomeLogo = 'fa-github';
-            } else {
-              fontAwesomeLogo = 'fa-linkedin';
-            }
-          }
-          console.log('font awesome', fontAwesomeLogo, 'social', urls);
-        }
         return _react2.default.createElement(
           'li',
-          { key: index },
+          { key: index, className: 'footer-social' },
+          _react2.default.createElement('i', { className: 'fa fa-' + key, 'aria-hidden': 'true' }),
           _react2.default.createElement(
             'a',
-            { href: urls },
-            _react2.default.createElement('i', { className: 'fa ' + fontAwesomeLogo, 'aria-hidden': 'true' }),
+            { href: _content.social[key] },
             _react2.default.createElement(
               'small',
               null,
               ' ',
-              _content.social[key]
+              key
             )
           )
         );
@@ -44099,60 +44086,51 @@ var Footer = function (_React$Component) {
       return _react2.default.createElement(
         'footer',
         null,
-        _react2.default.createElement('hr', null),
         _react2.default.createElement(
           'div',
           { className: 'container' },
           _react2.default.createElement(
-            'div',
-            { className: 'row flex-items-md-bottom flex-items-sm-bottom flex-items-xs-bottom' },
+            _reactBootstrap.Col,
+            { xs: 8, md: 8, sm: 8 },
+            _content.about.sitemapTitle
+          ),
+          _react2.default.createElement(
+            _reactBootstrap.Col,
+            { xs: 4, md: 4, sm: 4 },
+            _content.about.sitemapContact
+          ),
+          _react2.default.createElement(
+            _reactBootstrap.Col,
+            { xs: 8, md: 8, sm: 8 },
             _react2.default.createElement(
-              'div',
-              { className: 'col-md-8 col-sm-8 col-xs-8 sitemap-title' },
-              _content.about.sitemapTitle
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'col-md-4 col-sm-4 col-xs-4 sitemap-title' },
-              _content.about.sitemapContact
+              'ul',
+              { className: 'sitemap' },
+              displaySitemap,
+              _react2.default.createElement(
+                'a',
+                { href: _content.about.blog },
+                _react2.default.createElement(
+                  'small',
+                  null,
+                  'Blog'
+                )
+              )
             )
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'row flex-items-md-bottom flex-items-sm-bottom flex-items-xs-bottom' },
+            _reactBootstrap.Col,
+            { xs: 4, md: 4, sm: 4 },
             _react2.default.createElement(
-              'div',
-              { className: 'col-md-8 col-sm-8 col-xs-8' },
-              _react2.default.createElement(
-                'ul',
-                { className: 'sitemap' },
-                displaySitemap,
-                _react2.default.createElement(
-                  'a',
-                  { href: _content.about.blog },
-                  _react2.default.createElement(
-                    'small',
-                    null,
-                    'Blog'
-                  )
-                )
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'col-md-4 col-sm-4 col-xs-4' },
-              _react2.default.createElement(
-                'ul',
-                null,
-                displaySocial
-              )
+              'ul',
+              null,
+              displaySocial
             )
+          ),
+          _react2.default.createElement(
+            'i',
+            { className: 'fa fa-copyright', 'aria-hidden': 'true' },
+            ' Tanya Powell 2016'
           )
-        ),
-        _react2.default.createElement(
-          'i',
-          { className: 'fa fa-copyright', 'aria-hidden': 'true' },
-          ' Tanya Powell 2016'
         )
       );
     }
@@ -44163,7 +44141,7 @@ var Footer = function (_React$Component) {
 
 exports.default = Footer;
 
-},{"../content/content.js":500,"react":482,"react-router":314}],490:[function(require,module,exports){
+},{"../content/content.js":501,"react":482,"react-bootstrap":251,"react-router":314}],490:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -44329,7 +44307,7 @@ var Nav = function (_React$Component) {
 
 exports.default = Nav;
 
-},{"../content/content.js":500,"react":482,"react-bootstrap":251,"react-router-bootstrap":284}],492:[function(require,module,exports){
+},{"../content/content.js":501,"react":482,"react-bootstrap":251,"react-router-bootstrap":284}],492:[function(require,module,exports){
 'use strict';
 
 var _react = require('react');
@@ -44342,9 +44320,9 @@ var _Layout = require('./Layout.jsx');
 
 var _Layout2 = _interopRequireDefault(_Layout);
 
-var _About = require('./pages/About.jsx');
+var _AboutContainer = require('./containers/AboutContainer.jsx');
 
-var _About2 = _interopRequireDefault(_About);
+var _AboutContainer2 = _interopRequireDefault(_AboutContainer);
 
 var _Community = require('./pages/Community.jsx');
 
@@ -44382,8 +44360,8 @@ module.exports = _react2.default.createClass({
       _react2.default.createElement(
         _reactRouter.Route,
         { path: '/', component: _Layout2.default },
-        _react2.default.createElement(_reactRouter.IndexRoute, { component: _About2.default }),
-        _react2.default.createElement(_reactRouter.Route, { path: 'about', component: _About2.default }),
+        _react2.default.createElement(_reactRouter.IndexRoute, { component: _AboutContainer2.default }),
+        _react2.default.createElement(_reactRouter.Route, { path: 'about', component: _AboutContainer2.default }),
         _react2.default.createElement(_reactRouter.Route, { path: 'portfolio', component: _Portfolio2.default }),
         _react2.default.createElement(_reactRouter.Route, { path: 'skills', component: _Skills2.default }),
         _react2.default.createElement(_reactRouter.Route, { path: 'speaking', component: _Speaking2.default }),
@@ -44395,7 +44373,80 @@ module.exports = _react2.default.createClass({
   }
 });
 
-},{"./Layout.jsx":490,"./pages/About.jsx":493,"./pages/Community.jsx":494,"./pages/Contact.jsx":495,"./pages/Photography.jsx":496,"./pages/Portfolio.jsx":497,"./pages/Skills.jsx":498,"./pages/Speaking.jsx":499,"react":482,"react-router":314}],493:[function(require,module,exports){
+},{"./Layout.jsx":490,"./containers/AboutContainer.jsx":493,"./pages/Community.jsx":495,"./pages/Contact.jsx":496,"./pages/Photography.jsx":497,"./pages/Portfolio.jsx":498,"./pages/Skills.jsx":499,"./pages/Speaking.jsx":500,"react":482,"react-router":314}],493:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _About = require('../pages/About.jsx');
+
+var _About2 = _interopRequireDefault(_About);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var WORDS = ['a software engineer', 'passionate for inclusion', 'a photographer', 'a speaker', 'a masterchef in training'];
+
+var AboutContainer = function (_React$Component) {
+  _inherits(AboutContainer, _React$Component);
+
+  function AboutContainer(props) {
+    _classCallCheck(this, AboutContainer);
+
+    var _this = _possibleConstructorReturn(this, (AboutContainer.__proto__ || Object.getPrototypeOf(AboutContainer)).call(this, props));
+
+    _this.state = {
+      currentWord: 0
+    };
+
+    _this.nextWord = _this.nextWord.bind(_this);
+    return _this;
+  }
+
+  _createClass(AboutContainer, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this.interval = setInterval(this.nextWord, 3000);
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      clearInterval(this.interval);
+    }
+  }, {
+    key: 'nextWord',
+    value: function nextWord() {
+      var current = this.state.currentWord;
+      var next = ++current % WORDS.length;
+      this.setState({ currentWord: next });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var words = WORDS[this.state.currentWord];
+      return _react2.default.createElement(_About2.default, { words: words });
+    }
+  }]);
+
+  return AboutContainer;
+}(_react2.default.Component);
+
+exports.default = AboutContainer;
+
+},{"../pages/About.jsx":494,"react":482}],494:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -44439,15 +44490,25 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var About = function (_React$Component) {
   _inherits(About, _React$Component);
 
-  function About() {
+  function About(props) {
     _classCallCheck(this, About);
 
-    return _possibleConstructorReturn(this, (About.__proto__ || Object.getPrototypeOf(About)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (About.__proto__ || Object.getPrototypeOf(About)).call(this, props));
   }
 
   _createClass(About, [{
     key: 'render',
     value: function render() {
+      var words = this.props.words;
+
+      var displaySocial = Object.keys(_content.social).map(function (key, index) {
+        return _react2.default.createElement(
+          'a',
+          { href: _content.social[key], key: index },
+          _react2.default.createElement('i', { className: 'fa fa-' + key + ' fa-3x', 'aria-hidden': 'true' })
+        );
+      });
+
       return _react2.default.createElement(
         'div',
         null,
@@ -44460,9 +44521,19 @@ var About = function (_React$Component) {
             _react2.default.createElement(
               _reactBootstrap.PageHeader,
               null,
-              'Tanya is '
+              'Hi there!'
             ),
             _react2.default.createElement(_reactBootstrap.Image, { src: _content.about.headshot, alt: 'Tanya Powell', circle: true }),
+            _react2.default.createElement(
+              'h3',
+              null,
+              'My name is Tanya and I am ',
+              _react2.default.createElement(
+                'span',
+                { className: 'dynamic-words' },
+                words
+              )
+            ),
             _react2.default.createElement(
               'p',
               null,
@@ -44472,6 +44543,16 @@ var About = function (_React$Component) {
               'p',
               null,
               _content.about.infoTwo
+            ),
+            _react2.default.createElement(
+              'h5',
+              null,
+              'You can find me here'
+            ),
+            _react2.default.createElement(
+              'ul',
+              null,
+              displaySocial
             )
           )
         ),
@@ -44486,9 +44567,13 @@ var About = function (_React$Component) {
   return About;
 }(_react2.default.Component);
 
+About.propTypes = {
+  words: _react2.default.PropTypes.string.isRequired
+};
+
 exports.default = About;
 
-},{"../../content/content.js":500,"./Community.jsx":494,"./Photography.jsx":496,"./Skills.jsx":498,"./Speaking.jsx":499,"react":482,"react-bootstrap":251}],494:[function(require,module,exports){
+},{"../../content/content.js":501,"./Community.jsx":495,"./Photography.jsx":497,"./Skills.jsx":499,"./Speaking.jsx":500,"react":482,"react-bootstrap":251}],495:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -44523,13 +44608,43 @@ var Community = function (_React$Component) {
   }
 
   _createClass(Community, [{
+    key: 'handleClick',
+
+    // static propTypes: {
+    //  communities: React.PropTypes.array.isRequired,
+    // };
+    //
+    // static defaultProps: {
+    //   communities: communities;
+    // };
+
+    value: function handleClick() {
+      window.location.href = _content.communities.empowerhack.url;
+    }
+  }, {
     key: 'render',
     value: function render() {
+      var _this2 = this;
+
       var displayCommunities = Object.keys(_content.communities).map(function (key, index) {
         return _react2.default.createElement(
-          'li',
-          { key: index },
-          _content.communities[key]
+          _reactBootstrap.Col,
+          { xs: 12, md: 6, sm: 6, key: index },
+          _react2.default.createElement(
+            _reactBootstrap.Panel,
+            { header: _content.communities.empowerhack.title },
+            _react2.default.createElement(_reactBootstrap.Image, { src: _content.communities.empowerhack.img, alt: _content.communities.empowerhack.title, thumbnail: true }),
+            _react2.default.createElement(
+              'p',
+              null,
+              _content.communities.empowerhack.info
+            )
+          ),
+          _react2.default.createElement(
+            _reactBootstrap.Button,
+            { bsSize: 'large', onClick: _this2.handleClick, className: 'draw meet' },
+            'Visit their website'
+          )
         );
       });
 
@@ -44559,11 +44674,7 @@ var Community = function (_React$Component) {
             null,
             'Tart marzipan caramels apple pie toffee biscuit donut. Dessert cotton candy candy canes. Donut chocolate cake halvah. Bonbon candy pastry danish cake macaroon chocolate.'
           ),
-          _react2.default.createElement(
-            'ul',
-            { className: 'skillsList' },
-            displayCommunities
-          )
+          displayCommunities
         )
       );
     }
@@ -44574,7 +44685,7 @@ var Community = function (_React$Component) {
 
 exports.default = Community;
 
-},{"../../content/content.js":500,"react":482,"react-bootstrap":251}],495:[function(require,module,exports){
+},{"../../content/content.js":501,"react":482,"react-bootstrap":251}],496:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -44644,7 +44755,7 @@ var Contact = function (_React$Component) {
             'I usually respond quicker to a ',
             _react2.default.createElement(
               'a',
-              { href: _content.socialUrls.twitterLink },
+              { href: _content.social.twitter },
               'tweet'
             ),
             ' but if your message is longer than 140 characters feel free to drop me a message here and I\'ll get back you to as soon as I can \uD83D\uDE0A'
@@ -44693,7 +44804,7 @@ var Contact = function (_React$Component) {
 
 exports.default = Contact;
 
-},{"../../content/content.js":500,"react":482,"react-bootstrap":251}],496:[function(require,module,exports){
+},{"../../content/content.js":501,"react":482,"react-bootstrap":251}],497:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -44728,6 +44839,10 @@ var Photography = function (_React$Component) {
   _createClass(Photography, [{
     key: 'render',
     value: function render() {
+      var handleClick = function handleClick() {
+        window.location.href = 'https://flickr.com/tantan85';
+      };
+
       return _react2.default.createElement(
         'div',
         { id: 'photography-background' },
@@ -44753,6 +44868,11 @@ var Photography = function (_React$Component) {
             'p',
             null,
             'Tart marzipan caramels apple pie toffee biscuit donut. Dessert cotton candy candy canes. Donut chocolate cake halvah. Bonbon candy pastry danish cake macaroon chocolate.'
+          ),
+          _react2.default.createElement(
+            _reactBootstrap.Button,
+            { bsSize: 'large', onClick: handleClick, className: 'draw meet' },
+            'See more photos'
           )
         )
       );
@@ -44764,7 +44884,7 @@ var Photography = function (_React$Component) {
 
 exports.default = Photography;
 
-},{"react":482,"react-bootstrap":251}],497:[function(require,module,exports){
+},{"react":482,"react-bootstrap":251}],498:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -44835,7 +44955,7 @@ var Portfolio = function (_React$Component) {
 
 exports.default = Portfolio;
 
-},{"react":482,"react-bootstrap":251}],498:[function(require,module,exports){
+},{"react":482,"react-bootstrap":251}],499:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -44873,7 +44993,7 @@ var Skills = function (_React$Component) {
     key: 'render',
     value: function render() {
       var handleClick = function handleClick() {
-        window.location.href = _content.socialUrls.linkedinLink;
+        window.location.href = _content.social.linkedin;
       };
 
       var displaySkills = Object.keys(_content.skills).map(function (key, index) {
@@ -44930,7 +45050,7 @@ var Skills = function (_React$Component) {
 
 exports.default = Skills;
 
-},{"../../content/content.js":500,"react":482,"react-bootstrap":251}],499:[function(require,module,exports){
+},{"../../content/content.js":501,"react":482,"react-bootstrap":251}],500:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -45016,7 +45136,7 @@ var Speaking = function (_React$Component) {
 
 exports.default = Speaking;
 
-},{"../../content/content.js":500,"react":482,"react-bootstrap":251}],500:[function(require,module,exports){
+},{"../../content/content.js":501,"react":482,"react-bootstrap":251}],501:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -45034,15 +45154,33 @@ var about = exports.about = {
 };
 
 var communities = exports.communities = {
-  'empowerhack': 'EmpowerHack',
-  'acorn': 'Acorn Aspirations',
-  'codebar': 'Codebar'
+  'empowerhack': {
+    'title': 'EmpowerHack',
+    'url': 'http://empowerhack.io/',
+    'img': 'https://i.ytimg.com/vi/Q4ZIKzRSc0s/hqdefault.jpg',
+    'info': 'comm 1 info'
+  },
+  'acorn': {
+    'title': 'comm 2',
+    'url': 'comm 2 Link',
+    'img': 'comm 2 pic',
+    'info': 'comm 2 info'
+  }
 };
 
 var menu = exports.menu = {
   'about': 'About',
   'portfolio': 'Projects',
   'contact': 'Contact'
+};
+
+var projects = exports.projects = {
+  'drawMyLife': {
+    'title': 'Draw My Life',
+    'about': 'Cake fruitcake dessert muffin. Pastry croissant sweet carrot cake icing icing. Oat cake icing gummi bears jelly-o cake ice cream tart cupcake chupa chups. Biscuit liquorice cupcake jelly beans. Chupa chups cupcake sesame snaps cookie jelly beans fruitcake. Jujubes marshmallow chupa chups biscuit pastry. Donut biscuit pastry cheesecake. Cupcake cookie sweet roll oat cake tart caramels tootsie roll. Dessert gingerbread chocolate apple pie soufflé tootsie roll cheesecake lollipop. Marzipan oat cake biscuit lemon drops dragée carrot cake pie caramels icing. Sugar plum topping gingerbread. Toffee chupa chups bonbon dragée macaroon. Cupcake cheesecake cake bonbon fruitcake brownie cookie jelly beans pudding.',
+    'github': 'https://github.com/empowerhack/DrawMyLife-Service',
+    'website': ''
+  }
 };
 
 var sitemap = exports.sitemap = {
@@ -45068,15 +45206,9 @@ var skills = exports.skills = {
 };
 
 var social = exports.social = {
-  'twitter': 'Twitter',
-  'github': 'GitHub',
-  'linkedin': 'LinkedIn'
-};
-
-var socialUrls = exports.socialUrls = {
-  'twitterLink': 'https://twitter.com/tanya_powell',
-  'githubLink': 'https://github.com/tanyapowell',
-  'linkedinLink': 'https://uk.linkedin.com/in/tanyapowell'
+  'twitter': 'https://twitter.com/tanya_powell',
+  'github': 'https://github.com/tanyapowell',
+  'linkedin': 'https://uk.linkedin.com/in/tanyapowell'
 };
 
 var speaking = exports.speaking = {

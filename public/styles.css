@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Oxygen|Lora");
 footer {
+  font-family: "Oxygen", sans-serif;
   background-color: #191919;
   bottom: 0;
   color: #ced0ce;
@@ -13,8 +14,7 @@ footer {
   footer ul {
     list-style: none; }
   footer a {
-    color: #ced0ce;
-    font-family: "Oxygen", sans-serif; }
+    color: #ced0ce; }
     footer a:hover {
       -webkit-border-bottom-right-radius: 0;
       border-bottom-right-radius: 0;
@@ -22,7 +22,7 @@ footer {
       border-bottom-left-radius: 0;
       background-clip: padding-box;
       border-bottom: solid 1px #e6e8e6;
-      color: #f45e61;
+      color: #f15025;
       text-decoration: none; }
 
 .sitemap {
@@ -30,11 +30,11 @@ footer {
   -webkit-columns: 2;
   -moz-columns: 2; }
 
-.sitemap-title {
-  padding-left: 5em; }
+.footer-social:first-letter {
+  text-transform: uppercase; }
 
 .active {
-  border-bottom: solid 1px #f45e61; }
+  border-bottom: solid 1px #f15025; }
 
 nav {
   background-color: #191919;
@@ -49,24 +49,23 @@ nav {
       border-bottom-left-radius: 0;
       background-clip: padding-box;
       border-bottom: solid 1px #e6e8e6;
-      color: #f45e61;
+      color: #f15025;
       text-decoration: none; }
     nav a.navbar-brand {
-      color: #f45e61; }
+      color: #f15025; }
       nav a.navbar-brand:hover {
         color: #e6e8e6;
-        border-bottom: solid 1px #f45e61; }
+        border-bottom: solid 1px #f15025; }
 
 button.navbar-toggler {
-  float: right;
   background-color: #e6e8e6; }
 
 button {
   background: none;
   border: 0;
   box-sizing: border-box;
-  box-shadow: inset 0 0 0 2px #f45e61;
-  color: #f45e61;
+  box-shadow: inset 0 0 0 2px #f15025;
+  color: #f15025;
   font-size: inherit;
   font-weight: 700;
   margin: 1em;
@@ -74,7 +73,11 @@ button {
   text-align: center;
   text-transform: capitalize;
   position: relative;
-  vertical-align: middle; }
+  vertical-align: middle;
+  position: relative;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%); }
   button::before, button::after {
     box-sizing: border-box;
     content: '';
@@ -109,16 +112,16 @@ button {
     transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s; }
 
 .meet:hover {
-  color: #fbca67; }
+  color: #0eb7da; }
 .meet::after {
   top: 0;
   left: 0; }
 .meet:hover::before {
-  border-top-color: #fbca67;
-  border-right-color: #fbca67; }
+  border-top-color: #0eb7da;
+  border-right-color: #0eb7da; }
 .meet:hover::after {
-  border-bottom-color: #fbca67;
-  border-left-color: #fbca67;
+  border-bottom-color: #0eb7da;
+  border-left-color: #0eb7da;
   transition: height 0.25s ease-out, width 0.25s ease-out 0.25s; }
 
 #about-background {
@@ -134,7 +137,10 @@ button {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid #f45e61; }
+  border: 1px solid #f15025; }
+
+.dynamic-words {
+  color: #f15025; }
 
 #contact-background {
   background-image: url("./../img/writing.jpg");
@@ -146,10 +152,10 @@ button {
   background-size: cover; }
 
 h5 > a {
-  color: #f45e61; }
+  color: #f15025; }
   h5 > a:hover {
-    border-bottom: solid 1px #f45e61;
-    color: #f45e61;
+    border-bottom: solid 1px #f15025;
+    color: #f15025;
     text-decoration: none; }
 
 #community-background {

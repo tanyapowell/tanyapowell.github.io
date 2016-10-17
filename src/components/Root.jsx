@@ -3,7 +3,7 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 
 import Layout from './Layout.jsx';
 
-import About from './pages/About.jsx';
+import About from './containers/AboutContainer.jsx';
 import Community from './pages/Community.jsx';
 import Portfolio from './pages/Portfolio.jsx';
 import Skills from './pages/Skills.jsx';

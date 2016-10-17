@@ -14,6 +14,10 @@ button {
   text-transform: capitalize;
   position: relative;
   vertical-align: middle;
+  position: relative;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%);
 
   &::before,
   &::after {
@@ -76,7 +80,7 @@ button {
 
 .meet {
   &:hover {
-    color: $yellow;
+    color: $blue;
   }
 
   &::after {
@@ -85,13 +89,13 @@ button {
   }
 
   &:hover::before {
-    border-top-color: $yellow;
-    border-right-color: $yellow;
+    border-top-color: $blue;
+    border-right-color: $blue;
   }
 
   &:hover::after {
-    border-bottom-color: $yellow;
-    border-left-color: $yellow;
+    border-bottom-color: $blue;
+    border-left-color: $blue;
     transition: // Animate height first, then width
       height 0.25s ease-out,
       width 0.25s ease-out 0.25s;

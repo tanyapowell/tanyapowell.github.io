@@ -1,7 +1,7 @@
 import React from 'react';
 import { FormGroup, PageHeader } from 'react-bootstrap';
 
-import { socialUrls } from '../../content/content.js';
+import { social } from '../../content/content.js';
 
 export default class Contact extends React.Component {
   constructor(props) {
@@ -27,7 +27,7 @@ export default class Contact extends React.Component {
       <div id="contact-background">
         <div className="contact">
           <PageHeader>Get in touch with me</PageHeader>
-          <h5>I usually respond quicker to a <a href={ socialUrls.twitterLink }>tweet</a> but if your message is longer than 140 characters feel free to drop me a message here and I'll get back you to as soon as I can 😊</h5>
+          <h5>I usually respond quicker to a <a href={ social.twitter }>tweet</a> but if your message is longer than 140 characters feel free to drop me a message here and I'll get back you to as soon as I can 😊</h5>
            <form action="https://formspree.io/hello@tanyapowell.co.uk" method="POST">
              <FormGroup
                controlId="formBasicText"

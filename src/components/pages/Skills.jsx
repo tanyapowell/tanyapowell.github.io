@@ -1,12 +1,12 @@
 import React from 'react';
 import { Button, PageHeader } from 'react-bootstrap';
 
-import { skills, socialUrls } from '../../content/content.js';
+import { skills, social } from '../../content/content.js';
 
 export default class Skills extends React.Component {
   render() {
     const handleClick = () => {
-      window.location.href = socialUrls.linkedinLink;
+      window.location.href = social.linkedin;
     };
 
     const displaySkills = Object.keys(skills).map((key, index) => {

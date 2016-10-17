@@ -1,7 +1,8 @@
 import React from 'react';
+import { Col } from 'react-bootstrap';
 import { Link } from 'react-router';
 
-import { about, sitemap, social, socialUrls } from '../content/content.js';
+import { about, sitemap, social } from '../content/content.js';
 
 export default class Footer extends React.Component {
   render() {
@@ -14,58 +15,38 @@ export default class Footer extends React.Component {
     });
 
     const displaySocial = Object.keys(social).map((key, index) => {
-      let urls;
-      let fontAwesomeLogo;
-      for (const value in socialUrls) {
-        if (socialUrls.hasOwnProperty(value)) {
-          urls = socialUrls[value];
-          if (value === 'twitterLink') {
-            fontAwesomeLogo = 'fa-twitter';
-          } else if (value === 'githubLink') {
-            fontAwesomeLogo = 'fa-github';
-          } else {
-            fontAwesomeLogo = 'fa-linkedin';
-          }
-        }
-        console.log('font awesome', fontAwesomeLogo, 'social', urls);
-      }
       return (
-        <li key={ index }>
-          <a href={ urls }>
-            <i className={'fa ' + fontAwesomeLogo} aria-hidden="true"/>
-            <small> { social[key] }</small>
-            </a>
-        </li>
-      );
+          <li key={ index } className="footer-social">
+            <i className={'fa fa-' + key} aria-hidden="true"/>
+            <a href={ social[key] }>
+              <small> { key }</small>
+              </a>
+          </li>
+        );
     });
 
     return (
       <footer>
-        <hr/>
         <div className="container">
-          <div className="row flex-items-md-bottom flex-items-sm-bottom flex-items-xs-bottom">
-            <div className="col-md-8 col-sm-8 col-xs-8 sitemap-title">
+            <Col xs={8} md={8} sm={8}>
               { about.sitemapTitle }
-            </div>
-            <div className="col-md-4 col-sm-4 col-xs-4 sitemap-title">
+            </Col>
+            <Col xs={4} md={4} sm={4}>
               { about.sitemapContact }
-            </div>
-          </div>
-          <div className="row flex-items-md-bottom flex-items-sm-bottom flex-items-xs-bottom">
-            <div className="col-md-8 col-sm-8 col-xs-8">
+            </Col>
+            <Col xs={8} md={8} sm={8}>
               <ul className="sitemap">
                 { displaySitemap }
                 <a href={ about.blog }><small>Blog</small></a>
               </ul>
-            </div>
-            <div className="col-md-4 col-sm-4 col-xs-4">
+            </Col>
+            <Col xs={4} md={4} sm={4}>
               <ul>
                 { displaySocial }
               </ul>
-            </div>
-          </div>
+            </Col>
+            <i className="fa fa-copyright" aria-hidden="true"> Tanya Powell 2016</i>
         </div>
-        <i className="fa fa-copyright" aria-hidden="true"> Tanya Powell 2016</i>
       </footer>
       );
   }
