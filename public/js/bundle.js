@@ -44398,7 +44398,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var WORDS = ['a software engineer', 'passionate for inclusion', 'a photographer', 'a speaker', 'a masterchef in training'];
+var WORDS = ['a software engineer', 'passionate for inclusion', 'a photographer', 'a speaker', 'a masterchef in training', 'a volunteer'];
 
 var AboutContainer = function (_React$Component) {
   _inherits(AboutContainer, _React$Component);
@@ -44504,7 +44504,7 @@ var About = function (_React$Component) {
       var displaySocial = Object.keys(_content.social).map(function (key, index) {
         return _react2.default.createElement(
           'a',
-          { href: _content.social[key], key: index },
+          { href: _content.social[key], key: index, className: 'center' },
           _react2.default.createElement('i', { className: 'fa fa-' + key + ' fa-3x', 'aria-hidden': 'true' })
         );
       });
@@ -44523,10 +44523,10 @@ var About = function (_React$Component) {
               null,
               'Hi there!'
             ),
-            _react2.default.createElement(_reactBootstrap.Image, { src: _content.about.headshot, alt: 'Tanya Powell', circle: true }),
+            _react2.default.createElement(_reactBootstrap.Image, { src: _content.about.headshot, alt: 'Tanya Powell', thumbnail: true }),
             _react2.default.createElement(
               'h3',
-              null,
+              { className: 'center about-dynamic-header' },
               'My name is Tanya and I am ',
               _react2.default.createElement(
                 'span',
@@ -44536,24 +44536,20 @@ var About = function (_React$Component) {
             ),
             _react2.default.createElement(
               'p',
-              null,
+              { className: 'justified' },
               _content.about.infoOne
             ),
             _react2.default.createElement(
               'p',
-              null,
+              { className: 'justified' },
               _content.about.infoTwo
             ),
             _react2.default.createElement(
               'h5',
-              null,
-              'You can find me here'
+              { className: 'center' },
+              _content.about.infoThree
             ),
-            _react2.default.createElement(
-              'ul',
-              null,
-              displaySocial
-            )
+            displaySocial
           )
         ),
         _react2.default.createElement(_Skills2.default, null),
@@ -44609,17 +44605,8 @@ var Community = function (_React$Component) {
 
   _createClass(Community, [{
     key: 'handleClick',
-
-    // static propTypes: {
-    //  communities: React.PropTypes.array.isRequired,
-    // };
-    //
-    // static defaultProps: {
-    //   communities: communities;
-    // };
-
     value: function handleClick() {
-      window.location.href = _content.communities.empowerhack.url;
+      window.location.href = _content.communities.orgs.empowerhack.url;
     }
   }, {
     key: 'render',
@@ -44632,18 +44619,19 @@ var Community = function (_React$Component) {
           { xs: 12, md: 6, sm: 6, key: index },
           _react2.default.createElement(
             _reactBootstrap.Panel,
-            { header: _content.communities.empowerhack.title },
-            _react2.default.createElement(_reactBootstrap.Image, { src: _content.communities.empowerhack.img, alt: _content.communities.empowerhack.title, thumbnail: true }),
+            { header: _content.communities.orgs.empowerhack.title },
+            _react2.default.createElement(_reactBootstrap.Image, { src: _content.communities.orgs.empowerhack.img, alt: _content.communities.orgs.empowerhack.title, thumbnail: true }),
             _react2.default.createElement(
               'p',
               null,
-              _content.communities.empowerhack.info
+              _content.communities.orgs.empowerhack.info
             )
           ),
           _react2.default.createElement(
             _reactBootstrap.Button,
             { bsSize: 'large', onClick: _this2.handleClick, className: 'draw meet' },
-            'Visit their website'
+            'Visit ',
+            _content.communities.orgs.empowerhack.title
           )
         );
       });
@@ -44662,17 +44650,7 @@ var Community = function (_React$Component) {
           _react2.default.createElement(
             'p',
             null,
-            'Tart cupcake marshmallow powder powder ice cream. Pastry bear claw marzipan sugar plum tart powder biscuit. Wafer drag\xE9e gummies cookie brownie cotton candy lemon drops. Brownie donut gingerbread cake dessert.'
-          ),
-          _react2.default.createElement(
-            'p',
-            null,
-            'Tootsie roll tootsie roll dessert marshmallow. Oat cake gummi bears donut jelly-o powder sweet muffin. Carrot cake souffl\xE9 wafer biscuit cupcake pie muffin cake sweet.'
-          ),
-          _react2.default.createElement(
-            'p',
-            null,
-            'Tart marzipan caramels apple pie toffee biscuit donut. Dessert cotton candy candy canes. Donut chocolate cake halvah. Bonbon candy pastry danish cake macaroon chocolate.'
+            _content.communities.intro
           ),
           displayCommunities
         )
@@ -44996,11 +44974,11 @@ var Skills = function (_React$Component) {
         window.location.href = _content.social.linkedin;
       };
 
-      var displaySkills = Object.keys(_content.skills).map(function (key, index) {
+      var displaySkills = Object.keys(_content.skills.languages).map(function (key, index) {
         return _react2.default.createElement(
           'li',
           { key: index },
-          _content.skills[key]
+          _content.skills.languages[key]
         );
       });
 
@@ -45013,22 +44991,17 @@ var Skills = function (_React$Component) {
           _react2.default.createElement(
             _reactBootstrap.PageHeader,
             null,
-            'Skills'
+            'Technical Skills'
           ),
           _react2.default.createElement(
             'p',
-            null,
-            'Tart cupcake marshmallow powder powder ice cream. Pastry bear claw marzipan sugar plum tart powder biscuit. Wafer drag\xE9e gummies cookie brownie cotton candy lemon drops. Brownie donut gingerbread cake dessert.'
+            { className: 'justified' },
+            _content.skills.content.intro
           ),
           _react2.default.createElement(
             'p',
-            null,
-            'Tootsie roll tootsie roll dessert marshmallow. Oat cake gummi bears donut jelly-o powder sweet muffin. Carrot cake souffl\xE9 wafer biscuit cupcake pie muffin cake sweet.'
-          ),
-          _react2.default.createElement(
-            'p',
-            null,
-            'Tart marzipan caramels apple pie toffee biscuit donut. Dessert cotton candy candy canes. Donut chocolate cake halvah. Bonbon candy pastry danish cake macaroon chocolate.'
+            { className: 'center' },
+            _content.skills.content.main
           ),
           _react2.default.createElement(
             'ul',
@@ -45144,9 +45117,9 @@ Object.defineProperty(exports, "__esModule", {
 });
 var about = exports.about = {
   'title': '\{ Tanya Powell \}',
-  'subtitle': 'Software Engineer',
-  'infoOne': 'Soufflé pie wafer pie cake apple pie pudding lollipop sweet. Ice cream cheesecake powder fruitcake cupcake biscuit. Lemon drops sweet roll marzipan bonbon sugar plum topping soufflé marzipan.',
-  'infoTwo': 'Gingerbread cookie pudding liquorice bonbon marzipan pudding. Muffin sweet jelly-o tart chocolate cake candy. Jujubes jelly sugar plum. Tootsie roll cake soufflé cupcake marzipan pudding.',
+  'infoOne': 'During the day I make software and I often do the same during the night  too for various non-profit organisations.',
+  'infoTwo': 'I strongly believe in the intersectional inclusion of all and strive to celebrate all the differences that us all unique.',
+  'infoThree': 'Scroll down to find out more about me and get in touch with me via social media:',
   'blog': 'https://blog.tanyapowell.co.uk',
   'headshot': 'https://s3-eu-west-1.amazonaws.com/tanyapowell/6105146987_93f5537c01_m.jpg',
   'sitemapTitle': 'SITEMAP',
@@ -45154,17 +45127,22 @@ var about = exports.about = {
 };
 
 var communities = exports.communities = {
-  'empowerhack': {
-    'title': 'EmpowerHack',
-    'url': 'http://empowerhack.io/',
-    'img': 'https://i.ytimg.com/vi/Q4ZIKzRSc0s/hqdefault.jpg',
-    'info': 'comm 1 info'
-  },
-  'acorn': {
-    'title': 'comm 2',
-    'url': 'comm 2 Link',
-    'img': 'comm 2 pic',
-    'info': 'comm 2 info'
+  'intro': 'I am blessed to be part of two great organisations where I can use both my technical skills and soft skills to help make a positive change in this world.',
+  'orgs': {
+    'empowerhack': {
+      'title': 'EmpowerHack',
+      'url': 'http://empowerhack.io/',
+      'img': 'https://i.ytimg.com/vi/Q4ZIKzRSc0s/hqdefault.jpg',
+      'info': 'EmpowerHack is an open source community that creates technical solutions for refugee women and children',
+      'role': 'Frontend Engineer'
+    },
+    'acorn': {
+      'title': 'Acorn Aspirations',
+      'url': 'comm 2 Link',
+      'img': 'Acorn Aspirations is an organisation providing technical training and business expertise for teenage entrepreneurs',
+      'info': 'comm 2 info',
+      'role': 'Software Development Mentor'
+    }
   }
 };
 
@@ -45194,15 +45172,24 @@ var sitemap = exports.sitemap = {
 };
 
 var skills = exports.skills = {
-  'html': 'HTML5',
-  'sass': 'Sass',
-  'javascript': 'Vanilla Javascript',
-  'react': 'React.js',
-  'node': 'Node',
-  'sql': 'SQL',
-  'mongo': 'MongoDB',
-  'java': 'Java',
-  'net': '.Net'
+  'content': {
+    'intro': 'Since graduating in 2014 with an MSc in Software Engineering I have been consistently working as an Engineer, both professionally and voluntarily. I have developed my technical skills across multiple programming languages in this short time and have honed in my soft skills that I picked up during my former life as a Senior Presentation Scheduler.',
+    'main': 'Here are some of the languages I\'ve picked up and the list is growing:'
+  },
+  'languages': {
+    'html': 'HTML5',
+    'sass': 'Sass',
+    'javascript': 'Javascript',
+    'es6': 'ES6',
+    'react': 'React.js',
+    'node': 'Node',
+    'sql': 'SQL',
+    'mongo': 'MongoDB',
+    'java': 'Java'
+  },
+  'softSkills': {
+    '': ''
+  }
 };
 
 var social = exports.social = {

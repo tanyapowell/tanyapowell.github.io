@@ -9,19 +9,18 @@ export default class Skills extends React.Component {
       window.location.href = social.linkedin;
     };
 
-    const displaySkills = Object.keys(skills).map((key, index) => {
+    const displaySkills = Object.keys(skills.languages).map((key, index) => {
       return (
-        <li key={index} >{skills[key]}</li>
+        <li key={index} >{skills.languages[key]}</li>
       );
     });
 
     return (
       <div id="skills-background">
         <div className="skills">
-          <PageHeader>Skills</PageHeader>
-          <p>Tart cupcake marshmallow powder powder ice cream. Pastry bear claw marzipan sugar plum tart powder biscuit. Wafer dragée gummies cookie brownie cotton candy lemon drops. Brownie donut gingerbread cake dessert.</p>
-          <p>Tootsie roll tootsie roll dessert marshmallow. Oat cake gummi bears donut jelly-o powder sweet muffin. Carrot cake soufflé wafer biscuit cupcake pie muffin cake sweet.</p>
-          <p>Tart marzipan caramels apple pie toffee biscuit donut. Dessert cotton candy candy canes. Donut chocolate cake halvah. Bonbon candy pastry danish cake macaroon chocolate.</p>
+          <PageHeader>Technical Skills</PageHeader>
+          <p className="justified">{ skills.content.intro }</p>
+          <p className="center">{ skills.content.main }</p>
           <ul className="skillsList">
             { displaySkills }
           </ul>

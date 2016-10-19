@@ -7,7 +7,8 @@ const WORDS = [
   'passionate for inclusion',
   'a photographer',
   'a speaker',
-  'a masterchef in training'
+  'a masterchef in training',
+  'a volunteer'
 ];
 
 export default class AboutContainer extends React.Component {

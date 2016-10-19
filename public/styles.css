@@ -133,14 +133,17 @@ button {
   background-attachment: fixed;
   background-size: cover; }
 
-.img-circle {
+img-thumbail {
+  background-color: #f15025;
   display: block;
   margin-left: auto;
-  margin-right: auto;
-  border: 1px solid #f15025; }
+  margin-right: auto; }
 
 .dynamic-words {
   color: #f15025; }
+
+.about-dynamic-header {
+  padding: 15px; }
 
 #contact-background {
   background-image: url("./../img/writing.jpg");
@@ -174,6 +177,17 @@ h5 > a {
   columns: 3;
   -webkit-columns: 3;
   -moz-columns: 3; }
+
+div.panel {
+  padding: 15px; }
+
+div.panel-body {
+  text-align: justify; }
+
+div.panel-heading {
+  font-family: "Oxygen", sans-serif;
+  font-size: 28px;
+  text-align: center; }
 
 #photography-background {
   background-image: url("./../img/camera.jpg");
@@ -232,6 +246,12 @@ body {
 body > .page-wrap {
   height: auto;
   min-height: 100%; }
+
+.justified {
+  text-align: justify; }
+
+.center {
+  text-align: center; }
 
 div.container-fluid {
   padding: 0; }
