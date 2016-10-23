@@ -1,4 +1,4 @@
-@import "./../_variables", "./../_mixins";
+@import "./../_variables";
 
 #skills-background {
   // background-color: $orange;
@@ -14,18 +14,4 @@
   columns: 3;
   -webkit-columns: 3;
   -moz-columns: 3;
-}
-
-div.panel {
-  padding: 15px;
-}
-
-div.panel-body {
-  text-align: justify;
-}
-
-div.panel-heading {
-  font-family: $font-headings;
-  font-size: 28px;
-  text-align: center;
 }

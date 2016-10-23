@@ -33,6 +33,9 @@ footer {
 .footer-social:first-letter {
   text-transform: uppercase; }
 
+.footer {
+  color: #f15025; }
+
 .active {
   border-bottom: solid 1px #f15025; }
 
@@ -133,17 +136,18 @@ button {
   background-attachment: fixed;
   background-size: cover; }
 
-img-thumbail {
-  background-color: #f15025;
+img.img-thumbail {
   display: block;
-  margin-left: auto;
-  margin-right: auto; }
+  margin: 0 auto; }
 
 .dynamic-words {
   color: #f15025; }
 
 .about-dynamic-header {
   padding: 15px; }
+
+.center-social > i {
+  color: #f15025; }
 
 #contact-background {
   background-image: url("./../img/writing.jpg");
@@ -170,6 +174,27 @@ h5 > a {
   background-attachment: fixed;
   background-size: cover; }
 
+.communities {
+  background-color: white;
+  text-align: justify;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  background-clip: padding-box; }
+
+img.img-rounded {
+  height: auto;
+  width: 250px; }
+
+div.col-md-6, div.col-sm-12, div.col-xs-12 {
+  margin: 0, 0, 25px; }
+
+.test {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
 .skills ul {
   list-style: none; }
 
@@ -178,16 +203,18 @@ h5 > a {
   -webkit-columns: 3;
   -moz-columns: 3; }
 
-div.panel {
-  padding: 15px; }
+.talk {
+  height: 35em;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 1em;
+  border: 1px solid black; }
+  .talk img.img-rounded {
+    display: block;
+    margin: 0 auto; }
 
-div.panel-body {
-  text-align: justify; }
-
-div.panel-heading {
-  font-family: "Oxygen", sans-serif;
-  font-size: 28px;
-  text-align: center; }
+.talks {
+  padding-bottom: 1em; }
 
 #photography-background {
   background-image: url("./../img/camera.jpg");
@@ -198,10 +225,31 @@ div.panel-heading {
   background-attachment: fixed;
   background-size: cover; }
 
+#current-projects-background {
+  background-image: url("./../img/code1.jpg");
+  background-blend-mode: overlay, darken;
+  background-color: #e6e8e6;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; }
+
+.completed {
+  padding-bottom: 2em; }
+
+.project {
+  height: 27em; }
+  .project img.img-thumbnail {
+    display: block;
+    margin: 0 auto; }
+
+.looped-heading {
+  height: 3em; }
+
 #about-background, #community-background,
 #contact-background, #skills-background,
 #speaking-background, #photography-background,
-#portfolio-background {
+#portfolio-background, #current-projects-background, #completed-projects-background {
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -209,31 +257,36 @@ div.panel-heading {
 .about, .community,
 .contact, .skills,
 .speaking, .photography,
-.portfolio {
+.portfolio, .current, .completed {
   padding-bottom: 3em;
   padding-top: 3em;
-  width: 65%; }
+  width: 75%; }
   @media (max-width: 64.375em) {
     .about, .community,
     .contact, .skills,
     .speaking, .photography,
-    .portfolio {
-      width: 60%; } }
+    .portfolio, .current, .completed {
+      width: 70%; } }
   @media (max-width: 50em) {
     .about, .community,
     .contact, .skills,
     .speaking, .photography,
-    .portfolio {
+    .portfolio, .current, .completed {
       width: 80%; } }
   @media (max-width: 37.5em) {
     .about, .community,
     .contact, .skills,
     .speaking, .photography,
-    .portfolio {
+    .portfolio, .current, .completed {
       width: 95%; } }
 
 html, body, .page-wrap, #root {
   height: 100%; }
+
+.heading {
+  font-family: "Oxygen", sans-serif;
+  padding-top: 1em;
+  text-align: center; }
 
 .page-header {
   font-family: "Oxygen", sans-serif;
@@ -246,6 +299,9 @@ body {
 body > .page-wrap {
   height: auto;
   min-height: 100%; }
+
+p {
+  font-size: 18px; }
 
 .justified {
   text-align: justify; }

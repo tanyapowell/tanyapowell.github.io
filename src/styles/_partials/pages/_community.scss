@@ -1,4 +1,4 @@
-@import "./../_variables";
+@import "./../_variables", "./../_mixins";
 
 #community-background {
   background-image: url("./../img/community.jpg");
@@ -8,4 +8,36 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+}
+
+.communities {
+  background-color: $white;
+  text-align: justify;
+
+  @include border-radius(5px);
+}
+
+img.img-rounded {
+  height: auto;
+  width: 250px;
+}
+
+div.col-md-6, div.col-sm-12, div.col-xs-12 {
+  margin: 0, 0, 25px;
+  // padding: 0;
+}
+
+.test {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.test1 {
+  // padding: 5px;
+  // width: 200px;
+  // height: 150px;
+  // margin-top: 10px;
+
+  // line-height: 150px;
 }

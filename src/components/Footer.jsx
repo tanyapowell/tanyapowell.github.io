@@ -29,12 +29,6 @@ export default class Footer extends React.Component {
       <footer>
         <div className="container">
             <Col xs={8} md={8} sm={8}>
-              { about.sitemapTitle }
-            </Col>
-            <Col xs={4} md={4} sm={4}>
-              { about.sitemapContact }
-            </Col>
-            <Col xs={8} md={8} sm={8}>
               <ul className="sitemap">
                 { displaySitemap }
                 <a href={ about.blog }><small>Blog</small></a>
@@ -45,7 +39,7 @@ export default class Footer extends React.Component {
                 { displaySocial }
               </ul>
             </Col>
-            <i className="fa fa-copyright" aria-hidden="true"> Tanya Powell 2016</i>
+            <span className="footer">Made with <i className="fa fa-heart" aria-hidden="true"/> By Tanya Powell</span>
         </div>
       </footer>
       );

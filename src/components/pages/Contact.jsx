@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormGroup, PageHeader } from 'react-bootstrap';
+import { Button, FormGroup, PageHeader } from 'react-bootstrap';
 
 import { social } from '../../content/content.js';
 
@@ -37,10 +37,10 @@ export default class Contact extends React.Component {
                <input type="text" name="name" className="form-control" id="name" placeholder="e.g. Bob Smith" required/>
                <label htmlFor="email">Email:</label>
                <input type="email" name="_replyto" className="form-control" id="email" placeholder="e.g. bob@smith.com" required/>
-               <label htmlFor="comment">Comment:</label>
+               <label htmlFor="comment">Message:</label>
                <textarea name="comment" className="form-control" rows="5" id="comment" placeholder="Enter you message here" required/>
              </FormGroup>
-             <button type="submit" className="btn btn-default">Submit</button>
+             <Button bsSize="large" type="submit" className="draw meet">Say hi!</Button>
            </form>
        </div>
       </div>

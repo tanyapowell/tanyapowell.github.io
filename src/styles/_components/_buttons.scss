@@ -53,7 +53,6 @@ button {
     color: $cyan;
   }
 
-  // Hover styles
   &:hover::before,
   &:hover::after {
     width: 100%;

@@ -1,5 +1,32 @@
 @import "./../_variables";
 
-#about-background {
+#portfolio-background {
   // background-color: red;
+}
+
+#current-projects-background {
+  background-image: url("./../img/code1.jpg");
+  background-blend-mode: overlay, darken;
+  background-color: $aqua-spring;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.completed {
+  padding-bottom: 2em;
+}
+
+.project {
+  height: 27em;
+
+  img.img-thumbnail {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.looped-heading {
+  height: 3em;
 }

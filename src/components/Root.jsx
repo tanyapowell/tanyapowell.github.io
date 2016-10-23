@@ -7,7 +7,7 @@ import About from './containers/AboutContainer.jsx';
 import Community from './pages/Community.jsx';
 import Portfolio from './pages/Portfolio.jsx';
 import Skills from './pages/Skills.jsx';
-import Speaking from './pages/Speaking.jsx';
+import Talks from './pages/Talks.jsx';
 import Photography from './pages/Photography.jsx';
 import Contact from './pages/Contact.jsx';
 
@@ -22,7 +22,7 @@ module.exports = React.createClass({
           <Route path="about" component={ About }/>
           <Route path="portfolio" component={ Portfolio }/>
           <Route path="skills" component={ Skills }/>
-          <Route path="speaking" component={ Speaking }/>
+          <Route path="talks" component={ Talks }/>
           <Route path="community" component={ Community }/>
           <Route path="photography" component={ Photography }/>
           <Route path="contact" component={ Contact }/>

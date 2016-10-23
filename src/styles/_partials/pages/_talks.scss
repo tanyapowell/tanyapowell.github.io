@@ -1,0 +1,22 @@
+@import "./../_variables";
+
+#speaking-background {
+  // background-color: $orange;
+}
+
+.talk {
+  height: 35em;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 1em;
+  border: 1px solid black;
+
+  img.img-rounded {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.talks {
+  padding-bottom: 1em;
+}
