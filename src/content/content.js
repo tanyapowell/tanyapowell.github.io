@@ -51,7 +51,7 @@ export const projects = {
     'dmlProjectSite': {
       'title': 'Draw My Life Project Website',
       'about': 'Fruitcake jujubes cotton candy jelly-o bear claw cake macaroon caramels. Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish. Gummi bears chupa chups tart croissant.',
-      'github': '',
+      'github': 'https://github.com/empowerhack/DrawMyLife-Website',
       'techStack': [],
       'url': '',
       'role': 'Frontend Lead Developer',
@@ -61,7 +61,7 @@ export const projects = {
     'afrokouture': {
       'title': 'Afro Kouture',
       'about': 'Fruitcake jujubes cotton candy jelly-o bear claw cake macaroon caramels. Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish. Gummi bears chupa chups tart croissant.',
-      'github': '',
+      'github': 'https://github.com/afrokouture',
       'techStack': [],
       'url': '',
       'role': 'Frontend Lead Developer',

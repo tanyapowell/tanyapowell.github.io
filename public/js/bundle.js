@@ -44628,6 +44628,7 @@ var CurrentProjects = function (_React$Component) {
   function CurrentProjects() {
     _classCallCheck(this, CurrentProjects);
 
+    // TODO - Modal
     var _this = _possibleConstructorReturn(this, (CurrentProjects.__proto__ || Object.getPrototypeOf(CurrentProjects)).call(this));
 
     _this.state = {
@@ -44638,11 +44639,17 @@ var CurrentProjects = function (_React$Component) {
     return _this;
   }
 
+  // TODO - Modal
+
+
   _createClass(CurrentProjects, [{
     key: 'componentWillMount',
     value: function componentWillMount() {
       this.setState({ url: _content.projects.current.dmlService.url });
     }
+
+    // TODO - Modal
+
   }, {
     key: 'handleUrl',
     value: function handleUrl() {
@@ -44651,12 +44658,6 @@ var CurrentProjects = function (_React$Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _this2 = this;
-
-      var close = function close() {
-        return _this2.setState({ show: false });
-      };
-
       var displayCurrentProjects = Object.keys(_content.projects.current).map(function (key, index) {
         return _react2.default.createElement(
           'div',
@@ -44680,47 +44681,8 @@ var CurrentProjects = function (_React$Component) {
               ),
               _react2.default.createElement(
                 'a',
-                { onClick: function onClick() {
-                    return _this2.setState({ show: true });
-                  } },
+                { href: _content.projects.current[key].github },
                 _react2.default.createElement('i', { className: 'fa fa-eye fa-3x center', 'aria-hidden': 'true' })
-              )
-            )
-          ),
-          _react2.default.createElement(
-            _reactBootstrap.Modal,
-            { show: _this2.state.show, onHide: close },
-            _react2.default.createElement(
-              _reactBootstrap.Modal.Header,
-              { closeButton: true },
-              _react2.default.createElement(
-                _reactBootstrap.Modal.Title,
-                { className: 'center' },
-                _content.projects.current[key].title
-              )
-            ),
-            _react2.default.createElement(
-              _reactBootstrap.Modal.Body,
-              null,
-              _react2.default.createElement(
-                'p',
-                null,
-                _content.projects.current[key].title
-              )
-            ),
-            _react2.default.createElement(
-              _reactBootstrap.Modal.Footer,
-              null,
-              _react2.default.createElement(
-                _reactBootstrap.Button,
-                { onClick: _this2.handleUrl },
-                'Visit ',
-                _content.projects.current[key].url
-              ),
-              _react2.default.createElement(
-                _reactBootstrap.Button,
-                { onClick: close },
-                'Close'
               )
             )
           )
@@ -45171,7 +45133,7 @@ var projects = exports.projects = {
     'dmlProjectSite': {
       'title': 'Draw My Life Project Website',
       'about': 'Fruitcake jujubes cotton candy jelly-o bear claw cake macaroon caramels. Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish. Gummi bears chupa chups tart croissant.',
-      'github': '',
+      'github': 'https://github.com/empowerhack/DrawMyLife-Website',
       'techStack': [],
       'url': '',
       'role': 'Frontend Lead Developer',
@@ -45181,7 +45143,7 @@ var projects = exports.projects = {
     'afrokouture': {
       'title': 'Afro Kouture',
       'about': 'Fruitcake jujubes cotton candy jelly-o bear claw cake macaroon caramels. Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish. Gummi bears chupa chups tart croissant.',
-      'github': '',
+      'github': 'https://github.com/afrokouture',
       'techStack': [],
       'url': '',
       'role': 'Frontend Lead Developer',

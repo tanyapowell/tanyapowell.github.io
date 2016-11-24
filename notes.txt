@@ -1,0 +1,20 @@
+Projects Modal
+
+<a onClick={() => this.setState({ show: true})}>
+  <i className="fa fa-eye fa-3x center" aria-hidden="true" />
+</a>
+
+const close = () => this.setState({ show: false});
+
+<Modal show={this.state.show} onHide={close} >
+ <Modal.Header closeButton>
+   <Modal.Title className="center">{ projects.current[key].title }</Modal.Title>
+ </Modal.Header>
+ <Modal.Body>
+   <p>{ projects.current[key].title }</p>
+ </Modal.Body>
+ <Modal.Footer>
+   <Button onClick={ this.handleUrl }>Visit { projects.current[key].url }</Button>
+   <Button onClick={ close }>Close</Button>
+ </Modal.Footer>
+</Modal>

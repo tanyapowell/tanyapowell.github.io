@@ -1,11 +1,12 @@
 import React from 'react';
-import { Button, Col, Image, Modal, Row } from 'react-bootstrap';
+import { Col, Image, Row } from 'react-bootstrap';
 
 import { projects } from '../../content/content.js';
 
 export default class CurrentProjects extends React.Component {
   constructor() {
     super();
+    // TODO - Modal
     this.state = {
       show: false,
       url: '',
@@ -13,15 +14,15 @@ export default class CurrentProjects extends React.Component {
     };
   }
 
+  // TODO - Modal
   componentWillMount() {
     this.setState({ url: projects.current.dmlService.url});
   }
 
+  // TODO - Modal
   handleUrl() { window.location.href = this.state.url; }
 
   render() {
-    const close = () => this.setState({ show: false});
-
     const displayCurrentProjects = Object.keys(projects.current).map((key, index) => {
       return (
         <div key={ index }>
@@ -31,23 +32,11 @@ export default class CurrentProjects extends React.Component {
           <div className="caption">
             <h5 className="heading looped-heading">{ projects.current[key].title }</h5>
             <p className="justified">{ projects.current[key].desc }</p>
-            <a onClick={() => this.setState({ show: true})}>
+            <a href={ projects.current[key].github }>
               <i className="fa fa-eye fa-3x center" aria-hidden="true" />
             </a>
           </div>
         </Col>
-        <Modal show={this.state.show} onHide={close} >
-         <Modal.Header closeButton>
-           <Modal.Title className="center">{ projects.current[key].title }</Modal.Title>
-         </Modal.Header>
-         <Modal.Body>
-           <p>{ projects.current[key].title }</p>
-         </Modal.Body>
-         <Modal.Footer>
-           <Button onClick={ this.handleUrl }>Visit { projects.current[key].url }</Button>
-           <Button onClick={ close }>Close</Button>
-         </Modal.Footer>
-       </Modal>
        </div>
       );
     });
