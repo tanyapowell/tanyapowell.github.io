@@ -19,7 +19,7 @@ export default class Footer extends React.Component {
           <li key={ index } className="footer-social">
             <i className={'fa fa-' + key} aria-hidden="true"/>
             <a href={ social[key] }>
-              <small> { key }</small>
+              <small> {' ' + key }</small>
               </a>
           </li>
         );
@@ -31,7 +31,7 @@ export default class Footer extends React.Component {
             <Col xs={8} md={8} sm={8}>
               <ul className="sitemap">
                 { displaySitemap }
-                <a href={ about.blog }><small>Blog</small></a>
+                <a href={ about.blog }><small> Blog</small></a>
               </ul>
             </Col>
             <Col xs={4} md={4} sm={4}>
@@ -39,7 +39,7 @@ export default class Footer extends React.Component {
                 { displaySocial }
               </ul>
             </Col>
-            <span className="footer">Made with <i className="fa fa-heart" aria-hidden="true"/> By Tanya Powell</span>
+            <span className="footer center">Made with <i className="fa fa-heart" aria-hidden="true"/> By Tanya Powell</span>
         </div>
       </footer>
       );

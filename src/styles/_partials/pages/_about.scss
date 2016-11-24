@@ -1,16 +1,16 @@
-@import "./../_variables";
+@import './../variables';
 
 #about-background {
-  background-image: url("./../img/code1.jpg");
+  background-attachment: fixed;
   background-blend-mode: overlay, darken;
   background-color: $aqua-spring;
+  background-image: url('./../img/code1.jpg');
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-size: cover;
 }
 
-img.img-thumbail {
+img.img-thumbnail {
   display: block;
   margin: 0 auto;
 }
@@ -24,10 +24,15 @@ img.img-thumbail {
 }
 
 .center-social {
-  // left: 50%;
-  // margin-right: -50%;
+  text-align: center;
 
-  > i {
+  > a > i {
     color: $orange;
+    padding-right: 20px;
+    padding-top: 20px;
+
+    &:hover {
+      color: $blue;
+    }
   }
 }

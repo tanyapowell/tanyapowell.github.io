@@ -11,7 +11,7 @@ export default class Skills extends React.Component {
 
     const displaySkills = Object.keys(skills.languages).map((key, index) => {
       return (
-        <li key={index} >{skills.languages[key]}</li>
+        <li key={index} className={'devicons devicons-' + key} >{ ' ' + skills.languages[key] }</li>
       );
     });
 

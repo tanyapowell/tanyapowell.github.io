@@ -1,7 +1,7 @@
 import React from 'react';
-import { Button, FormGroup, PageHeader } from 'react-bootstrap';
+import { Button, Col, FormGroup, Image, PageHeader } from 'react-bootstrap';
 
-import { social } from '../../content/content.js';
+import { about, social } from '../../content/content.js';
 
 export default class Contact extends React.Component {
   constructor(props) {
@@ -28,6 +28,10 @@ export default class Contact extends React.Component {
         <div className="contact">
           <PageHeader>Get in touch with me</PageHeader>
           <h5>I usually respond quicker to a <a href={ social.twitter }>tweet</a> but if your message is longer than 140 characters feel free to drop me a message here and I'll get back you to as soon as I can 😊</h5>
+          <Col xs={12} md={4} sm={4}>
+            <Image src={ about.headshot } alt="Tanya Powell" thumbnail/>
+          </Col>
+          <Col xs={12} md={8} sm={8}>
            <form action="https://formspree.io/hello@tanyapowell.co.uk" method="POST">
              <FormGroup
                controlId="formBasicText"
@@ -42,6 +46,7 @@ export default class Contact extends React.Component {
              </FormGroup>
              <Button bsSize="large" type="submit" className="draw meet">Say hi!</Button>
            </form>
+         </Col>
        </div>
       </div>
     );

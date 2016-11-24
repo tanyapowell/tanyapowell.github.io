@@ -1,4 +1,4 @@
-@import "../_partials/_variables", "../_partials/_mixins";
+@import '../_partials/variables', '../_partials/mixins';
 
 .active {
   border-bottom: solid 1px $orange;
@@ -23,8 +23,8 @@ nav {
       color: $orange;
 
       &:hover {
-        color: $aqua-spring;
         border-bottom: solid 1px $orange;
+        color: $aqua-spring;
       }
     }
   }

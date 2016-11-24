@@ -1,8 +1,8 @@
-@import "_components/_footer", "_components/_navbar", "_components/_buttons",
-        "_partials/_imports", "_partials/_variables", "_partials/pages/_pages",
-        "_partials/_mixins";
+@import '_components/footer', '_components/navbar', '_components/buttons',
+        '_partials/imports', '_partials/variables', '_partials/pages/pages',
+        '_partials/mixins';
 
-html, body, .page-wrap, #root {
+#root {
   height: 100%;
 }
 
@@ -12,19 +12,19 @@ html, body, .page-wrap, #root {
   text-align: center;
 }
 
-.page-header{
+.page-header {
   font-family: $font-headings;
-  text-align: center;
   padding-bottom: 3em;
+  text-align: center;
 }
 
 body {
   padding-top: 50px;
-}
 
-body > .page-wrap {
-  height: auto;
-  min-height: 100%;
+  > .page-wrap {
+    height: auto;
+    min-height: 100%;
+  }
 }
 
 p {

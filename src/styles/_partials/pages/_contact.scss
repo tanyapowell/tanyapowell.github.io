@@ -1,13 +1,13 @@
-@import "./../_variables", "./../_mixins";
+@import './../variables', './../mixins';
 
 #contact-background {
-  background-image: url("./../img/writing.jpg");
-  background-blend-mode: overlay, darken;
-  background-color: $aqua-spring;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+  // background-attachment: fixed;
+  // background-blend-mode: overlay, darken;
+  // background-color: $aqua-spring;
+  // background-image: url('./../img/writing.jpg');
+  // background-position: 50% 50%;
+  // background-repeat: no-repeat;
+  // background-size: cover;
 }
 
 h5 > a {

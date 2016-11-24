@@ -1,8 +1,4 @@
-@import "./../_variables";
-
-#skills-background {
-  // background-color: $orange;
-}
+@import './../variables';
 
 .skills {
   ul {
@@ -11,7 +7,13 @@
 }
 
 .skillsList {
-  columns: 3;
-  -webkit-columns: 3;
   -moz-columns: 3;
+  -webkit-columns: 3;
+  columns: 3;
+}
+
+.devicons {
+  border: 1px dotted $blue;
+  font-size: 24px;
+  padding: 8px;
 }

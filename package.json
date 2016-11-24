@@ -10,7 +10,7 @@
     "bundle": "browserify src/app.js -o public/js/bundle.js -t [ babelify --presets [ es2015 react ] ]",
     "uglify": "uglifyjs public/js/bundle.js -o public/js/bundle.min.js",
     "clean-css": "cleancss -o public/styles.min.css public/styles.css",
-    "production": "npm run bundle && npm run uglify && npm run clean-css"
+    "production": "npm run bundle && npm run uglify"
   },
   "repository": {
     "type": "git",
@@ -41,6 +41,7 @@
     "gh-pages": "^0.11.0",
     "local-web-server": "^1.2.6",
     "react-logger": "^1.1.0",
+    "sass-lint": "^1.9.1",
     "watchify": "^3.7.0"
   },
   "dependencies": {

@@ -1,16 +1,12 @@
-@import "./../_variables";
-
-#portfolio-background {
-  // background-color: red;
-}
+@import './../variables';
 
 #current-projects-background {
-  background-image: url("./../img/code1.jpg");
+  background-attachment: fixed;
   background-blend-mode: overlay, darken;
   background-color: $aqua-spring;
+  background-image: url('./../img/code1.jpg');
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-size: cover;
 }
 
@@ -19,11 +15,48 @@
 }
 
 .project {
-  height: 27em;
+  height: 20em;
+  overflow: hidden;
+  width: 20em;
 
   img.img-thumbnail {
-    display: block;
-    margin: 0 auto;
+    height: 20em;
+    left: 0;
+    position: relative;
+    right: 0;
+    width: 35em;
+  }
+
+  .caption {
+    background: none repeat scroll 0 0 $dark-grey;
+    bottom: 0;
+    color: $blue;
+    left: 0;
+    opacity: .9;
+    position: absolute;
+    top: 80%;
+    transition: bottom .5s, top .5s;
+    vertical-align: bottom;
+
+    > p {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    > a > i {
+      color: $white;
+      display: block;
+
+      &:hover {
+        color: $orange;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &:hover .caption {
+    bottom: 0%;
+    top: 20%;
   }
 }
 

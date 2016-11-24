@@ -1,17 +1,17 @@
-@import "../_partials/_variables", "../_partials/_mixins";
+@import '../_partials/variables', '../_partials/mixins';
 
 footer {
-  font-family: $font-headings;
+  align-items: center;
   background-color: $dark-grey;
   bottom: 0;
-  color: $light-grey;
   clear: both;
+  color: $light-grey;
+  display: flex;
+  font-family: $font-headings;
+  justify-content: center;
+  margin-top: -5em;
   position: relative;
   z-index: 10;
-  margin-top: -5em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
   ul {
     list-style: none;
@@ -30,12 +30,12 @@ footer {
 }
 
 .sitemap {
-  columns: 2;
-  -webkit-columns: 2;
   -moz-columns: 2;
+  -webkit-columns: 2;
+  columns: 2;
 }
 
-.footer-social:first-letter {
+.footer-social::first-letter {
   text-transform: uppercase;
 }
 

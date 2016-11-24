@@ -45,8 +45,8 @@ export const projects = {
       'techStack': [],
       'url': '',
       'role': 'Frontend Lead Developer',
-      'img': 'https://s3-eu-west-1.amazonaws.com/tanyapowell/6105146987_93f5537c01_m.jpg',
-      'desc': 'Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish.'
+      'img': './../img/writing.jpg',
+      'desc': 'Image management tool to help support the rights of refugee children'
     },
     'dmlProjectSite': {
       'title': 'Draw My Life Project Website',
@@ -55,18 +55,18 @@ export const projects = {
       'techStack': [],
       'url': '',
       'role': 'Frontend Lead Developer',
-      'img': 'https://s3-eu-west-1.amazonaws.com/tanyapowell/6105146987_93f5537c01_m.jpg',
-      'desc': 'Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish.'
+      'img': './../img/ux.jpg',
+      'desc': 'Central hub of the Draw My Life project, partners and sponsors'
     },
-    'test': {
-      'title': 'test',
+    'afrokouture': {
+      'title': 'Afro Kouture',
       'about': 'Fruitcake jujubes cotton candy jelly-o bear claw cake macaroon caramels. Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish. Gummi bears chupa chups tart croissant.',
       'github': '',
       'techStack': [],
       'url': '',
       'role': 'Frontend Lead Developer',
-      'img': 'https://s3-eu-west-1.amazonaws.com/tanyapowell/6105146987_93f5537c01_m.jpg',
-      'desc': 'Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish.'
+      'img': './../img/persona.jpg',
+      'desc': 'Empowering Black British Women through technology'
     }
   },
   'completed': {
@@ -77,7 +77,7 @@ export const projects = {
       'techStack': [],
       'url': '',
       'role': 'Software Developer',
-      'img': 'https://s3-eu-west-1.amazonaws.com/tanyapowell/6105146987_93f5537c01_m.jpg',
+      'img': './../img/ux1.jpg',
       'desc': 'Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish.'
     },
     'hackBrexit': {
@@ -87,8 +87,8 @@ export const projects = {
       'techStack': [''],
       'url': '',
       'role': 'Software Developer',
-      'img': 'https://s3-eu-west-1.amazonaws.com/tanyapowell/6105146987_93f5537c01_m.jpg',
-      'desc': 'Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish.'
+      'img': './../img/laptop.jpg',
+      'desc': 'Central hub for all Hack Brexit projects, partners and sponsors'
     },
     'shakeAwake': {
       'title': 'Shake Awake',
@@ -96,7 +96,7 @@ export const projects = {
       'github': '',
       'techStack': [''],
       'url': '',
-      'img': 'https://s3-eu-west-1.amazonaws.com/tanyapowell/6105146987_93f5537c01_m.jpg',
+      'img': './../img/ux2.jpg',
       'desc': 'Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish.'
     },
     'styleCare': {
@@ -106,7 +106,7 @@ export const projects = {
       'techStack': [''],
       'url': '',
       'role': 'Lead Developer',
-      'img': 'https://s3-eu-west-1.amazonaws.com/tanyapowell/6105146987_93f5537c01_m.jpg',
+      'img': './../img/ux3.jpg',
       'desc': 'Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish.'
     },
     'whfnp': {
@@ -116,8 +116,8 @@ export const projects = {
       'techStack': [''],
       'url': '',
       'role': 'Software Developer',
-      'img': 'https://s3-eu-west-1.amazonaws.com/tanyapowell/6105146987_93f5537c01_m.jpg',
-      'desc': 'Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish.'
+      'img': './../img/writing.jpg',
+      'desc': 'Open Source community for women and non-profits organisations'
     }
   }
 };
@@ -148,14 +148,14 @@ export const skills = {
     'main': 'Here are some of the languages I\'ve picked up and the list is growing:'
   },
   'languages': {
-    'html': 'HTML5',
+    'html5': 'HTML5',
     'sass': 'Sass',
     'javascript': 'Javascript',
-    'es6': 'ES6',
+    'javascript_badge': 'ES6',
     'react': 'React.js',
-    'node': 'Node',
-    'sql': 'SQL',
-    'mongo': 'MongoDB',
+    'nodejs': 'Node',
+    'postgresql': 'Postgresql',
+    'mongodb': 'MongoDB',
     'java': 'Java'
   },
   'softSkills': {
@@ -166,48 +166,50 @@ export const skills = {
 export const social = {
   'twitter': 'https://twitter.com/tanya_powell',
   'github': 'https://github.com/tanyapowell',
-  'linkedin': 'https://uk.linkedin.com/in/tanyapowell'
+  'linkedin': 'https://uk.linkedin.com/in/tanyapowell',
+  'codepen': 'http://codepen.io/tanyapowell/'
 };
 
 export const speaking = {
-  'intro': 'In 2016 I began public speaking to a range of different technology communities. The talks I give range from personal expreience in the industry to technical talks. Why did I start? I like to tell stories that can encourage and boost the confidence in someone who is trying to persue a life in technology',
+  'intro': 'With an ability to articulate my thoughts in a way that anyone can understand I decided to use my voice for good and began public speaking. My talks range from personal experiences in the tech industry to technical talks. I can talk for days about my passion for inclusion, and this passion has led others to start their own initiatives to improve inclusion in their workplace.',
+  'intro2': 'I\'m fortunate to have given all the talks below in 2016 and I am available to give talks in 2017. If you would like me to talk at your meetup/conference/event get in touch with me.',
   'talks': {
-    'carrots': {
-      'title': 'How I got started in technology',
-      'img': 'http://placekitten.com/g/250/250',
-      'desc': 'Fruitcake jujubes cotton candy jelly-o bear claw cake macaroon caramels. Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish. Gummi bears chupa chups tart croissant.',
-      'slides': 'https://tanyapowell.co.uk'
-    },
-    'codeBar': {
-      'title': 'Introduction to Behavioural Driven Development',
-      'img': 'http://placekitten.com/g/250/250',
-      'desc': 'Fruitcake jujubes cotton candy jelly-o bear claw cake macaroon caramels. Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish. Gummi bears chupa chups tart croissant.',
-      'slides': 'https://tanyapowell.co.uk'
-    },
-    'diversityJs': {
-      'title': 'Diversity.JS',
-      'img': 'http://placekitten.com/g/250/250',
-      'desc': 'Fruitcake jujubes cotton candy jelly-o bear claw cake macaroon caramels. Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish. Gummi bears chupa chups tart croissant.',
-      'slides': 'https://tanyapowell.co.uk'
-    },
-    'fearlessFutures': {
-      'title': 'Designing for Intersectionalaity',
-      'img': 'http://placekitten.com/g/250/250',
-      'desc': 'Fruitcake jujubes cotton candy jelly-o bear claw cake macaroon caramels. Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish. Gummi bears chupa chups tart croissant.',
-      'slides': 'https://tanyapowell.co.uk'
-    },
     'geekGirl': {
       'title': 'Community Driven Development',
-      'img': 'http://placekitten.com/g/250/250',
+      'img': './../img/writing.jpg',
       'desc': 'Fruitcake jujubes cotton candy jelly-o bear claw cake macaroon caramels. Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish. Gummi bears chupa chups tart croissant.',
-      'slides': 'https://tanyapowell.co.uk',
+      'slides': 'http://slides.com/krissygoround/tanya-krissy-gg-conf-2016#/',
       'video': 'https://www.periscope.tv/w/1ypKdAbyODnGW'
     },
-    'ladiesOfCode': {
-      'title': 'Intersectionalaity and Technology',
-      'img': 'http://placekitten.com/g/250/250',
+    'carrots': {
+      'title': 'How I got started in technology',
+      'img': './../img/writing.jpg',
       'desc': 'Fruitcake jujubes cotton candy jelly-o bear claw cake macaroon caramels. Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish. Gummi bears chupa chups tart croissant.',
-      'slides': 'https://tanyapowell.co.uk'
+      'slides': 'https://tanyapowell.co.uk/how-i-started'
+    },
+    'codeBar': {
+      'title': 'Introduction to BDD',
+      'img': './../img/writing.jpg',
+      'desc': 'Fruitcake jujubes cotton candy jelly-o bear claw cake macaroon caramels. Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish. Gummi bears chupa chups tart croissant.',
+      'slides': 'https://tanyapowell.co.uk/intro-to-bdd-talk'
+    },
+    'fearlessFutures': {
+      'title': 'Designing for Intersectionality',
+      'img': './../img/writing.jpg',
+      'desc': 'Fruitcake jujubes cotton candy jelly-o bear claw cake macaroon caramels. Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish. Gummi bears chupa chups tart croissant.',
+      'slides': 'https://tanyapowell.co.uk/design-for-intersectionality'
+    },
+    'ladiesOfCode': {
+      'title': 'Intersectionality and Technology',
+      'img': './../img/writing.jpg',
+      'desc': 'Fruitcake jujubes cotton candy jelly-o bear claw cake macaroon caramels. Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish. Gummi bears chupa chups tart croissant.',
+      'slides': 'https://tanyapowell.co.uk/intersectionality-in-tech'
+    },
+    'diversityJs': {
+      'title': 'Diversity.js',
+      'img': './../img/writing.jpg',
+      'desc': 'Fruitcake jujubes cotton candy jelly-o bear claw cake macaroon caramels. Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish. Gummi bears chupa chups tart croissant.',
+      'slides': '#'
     }
   }
 };

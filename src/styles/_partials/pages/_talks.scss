@@ -1,22 +1,54 @@
-@import "./../_variables";
-
-#speaking-background {
-  // background-color: $orange;
-}
+@import './../variables';
 
 .talk {
-  height: 35em;
-  padding-left: 0;
-  padding-right: 0;
-  padding-bottom: 1em;
-  border: 1px solid black;
+  height: 20em;
+  overflow: hidden;
+  width: 20em;
 
-  img.img-rounded {
+  img.img-thumbnail {
     display: block;
+    height: 20em;
+    left: 0;
     margin: 0 auto;
+    position: relative;
+    right: 0;
+  }
+
+  .caption {
+    background: none repeat scroll 0 0 $dark-grey;
+    bottom: 0;
+    color: $blue;
+    left: 0;
+    opacity: .9;
+    position: absolute;
+    top: 80%;
+    transition: bottom .5s, top .5s;
+    vertical-align: bottom;
+
+    > p {
+      font-size: 14px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    > a > i {
+      color: $white;
+      display: block;
+
+      &:hover {
+        color: $orange;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &:hover .caption {
+    bottom: 0%;
+    top: 20%;
   }
 }
 
 .talks {
-  padding-bottom: 1em;
+  padding-bottom: 3em;
+  padding-top: 3em;
 }

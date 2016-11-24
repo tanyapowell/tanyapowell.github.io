@@ -1,23 +1,43 @@
-@import "./../_variables", "./_about", "./_contact", "./community",
-        "./_skills", "./_talks", "./photography","./_portfolio";
+@import './../variables', './about', './contact', './community',
+        './skills', './talks', './photography','./portfolio';
 
-#about-background, #community-background,
-#contact-background, #skills-background,
-#speaking-background, #photography-background,
-#portfolio-background, #current-projects-background, #completed-projects-background {
+#about-background,
+#community-background,
+#contact-background,
+#skills-background,
+#speaking-background,
+#photography-background,
+#portfolio-background,
+#current-projects-background,
+#completed-projects-background {
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
-.about, .community,
-.contact, .skills,
-.speaking, .photography,
-.portfolio, .current, .completed {
+.about,
+.community,
+.contact,
+.skills,
+.speaking,
+.photography,
+.portfolio,
+.current,
+.completed {
   padding-bottom: 3em;
   padding-top: 3em;
   width: 75%;
   @include breakpoint(large) { width: 70%; }
   @include breakpoint(medium) { width: 80%; }
+  @include breakpoint(small) { width: 95%; }
+}
+
+.current,
+.completed {
+  padding-bottom: 3em;
+  padding-top: 3em;
+  width: 95%;
+  @include breakpoint(large) { width: 90%; }
+  @include breakpoint(medium) { width: 90%; }
   @include breakpoint(small) { width: 95%; }
 }
