@@ -70,22 +70,12 @@ export const projects = {
     }
   },
   'completed': {
-    'forgetMeNot': {
-      'title': 'Forget Me Not',
-      'about': 'Fruitcake jujubes cotton candy jelly-o bear claw cake macaroon caramels. Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish. Gummi bears chupa chups tart croissant.',
-      'github': '',
-      'techStack': [],
-      'url': '',
-      'role': 'Software Developer',
-      'img': './../img/ux1.jpg',
-      'desc': 'Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish.'
-    },
     'hackBrexit': {
       'title': 'Hack Brexit Website',
       'about': 'Fruitcake jujubes cotton candy jelly-o bear claw cake macaroon caramels. Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish. Gummi bears chupa chups tart croissant.',
       'github': '',
       'techStack': [''],
-      'url': '',
+      'url': 'http://hackbrexit.org/',
       'role': 'Software Developer',
       'img': './../img/laptop.jpg',
       'desc': 'Central hub for all Hack Brexit projects, partners and sponsors'
@@ -95,7 +85,7 @@ export const projects = {
       'about': 'Fruitcake jujubes cotton candy jelly-o bear claw cake macaroon caramels. Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish. Gummi bears chupa chups tart croissant.',
       'github': '',
       'techStack': [''],
-      'url': '',
+      'url': 'http://tanyapowell.co.uk/shake-awake/',
       'img': './../img/ux2.jpg',
       'desc': 'Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish.'
     },
@@ -104,7 +94,7 @@ export const projects = {
       'about': 'Fruitcake jujubes cotton candy jelly-o bear claw cake macaroon caramels. Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish. Gummi bears chupa chups tart croissant.',
       'github': '',
       'techStack': [''],
-      'url': '',
+      'url': 'http://tanyapowell.co.uk/stylecare4u',
       'role': 'Lead Developer',
       'img': './../img/ux3.jpg',
       'desc': 'Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish.'
@@ -114,10 +104,20 @@ export const projects = {
       'about': 'Fruitcake jujubes cotton candy jelly-o bear claw cake macaroon caramels. Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish. Gummi bears chupa chups tart croissant.',
       'github': '',
       'techStack': [''],
-      'url': '',
+      'url': 'https://womenhackfornonprofits.com',
       'role': 'Software Developer',
       'img': './../img/writing.jpg',
       'desc': 'Open Source community for women and non-profits organisations'
+    },
+    'forgetMeNot': {
+      'title': 'Forget Me Not',
+      'about': 'Fruitcake jujubes cotton candy jelly-o bear claw cake macaroon caramels. Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish. Gummi bears chupa chups tart croissant.',
+      'github': '',
+      'techStack': [],
+      'url': 'https://github.com/AcornHack/forget-me-not',
+      'role': 'Software Developer',
+      'img': './../img/ux1.jpg',
+      'desc': 'Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish.'
     }
   }
 };
