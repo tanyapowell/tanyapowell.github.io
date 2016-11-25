@@ -22,7 +22,6 @@ export default class Photography extends React.Component {
       <div id="photography-background">
         <div className="photography">
           <PageHeader>Photography</PageHeader>
-          <p className="justified">{ photography.intro }</p>
             { displayPhotos }
           <Button bsSize="large" onClick={ handleClick } className="draw meet">See more photos</Button>
         </div>

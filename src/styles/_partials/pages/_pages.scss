@@ -26,17 +26,25 @@
 .completed {
   padding-bottom: 3em;
   padding-top: 3em;
-  width: 75%;
+  width: 65%;
   @include breakpoint(large) { width: 70%; }
   @include breakpoint(medium) { width: 80%; }
   @include breakpoint(small) { width: 95%; }
 }
 
-.current,
-.completed {
+.current {
   padding-bottom: 3em;
   padding-top: 3em;
   width: 95%;
+  @include breakpoint(large) { width: 90%; }
+  @include breakpoint(medium) { width: 90%; }
+  @include breakpoint(small) { width: 95%; }
+}
+
+.completed {
+  padding-bottom: 3em;
+  padding-top: 3em;
+  width: 75%;
   @include breakpoint(large) { width: 90%; }
   @include breakpoint(medium) { width: 90%; }
   @include breakpoint(small) { width: 95%; }

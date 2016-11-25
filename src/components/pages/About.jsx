@@ -1,5 +1,4 @@
 import React from 'react';
-import { PageHeader } from 'react-bootstrap';
 
 import { about, social } from '../../content/content.js';
 
@@ -17,7 +16,7 @@ class About extends React.Component {
     const displaySocial = Object.keys(social).map((key, index) => {
       return (
         <a href={ social[key] } key={index}>
-          <i className={'fa fa-' + key + ' fa-3x'} aria-hidden="true"/>
+          <i className={'fa fa-' + key + ' fa-2x'} aria-hidden="true"/>
         </a>
       );
     });
@@ -26,10 +25,9 @@ class About extends React.Component {
       <div>
         <div id="about-background">
           <div className="about">
-            <PageHeader>Hi there!</PageHeader>
-            <h3 className="center about-dynamic-header">My name is Tanya and I am <span className="dynamic-words">{ words }</span></h3>
+            <h3 className="center about-dynamic-header">Hi there! My name is Tanya and I am <span className="dynamic-words">{ words }</span></h3>
             <p className="justified">{ about.infoOne }</p>
-            <h5 className="center heading">{ about.infoThree }</h5>
+            <p className="justified">{ about.infoTwo }</p>
             <div className="center-social"> { displaySocial } </div>
           </div>
         </div>

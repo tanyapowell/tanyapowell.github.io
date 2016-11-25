@@ -72,7 +72,7 @@ button {
   font-size: inherit;
   font-weight: 700;
   left: 50%;
-  margin: 1em;
+  margin: 3em;
   margin-right: -50%;
   padding: 1em 2em;
   position: relative;
@@ -86,6 +86,9 @@ button {
     height: 100%;
     position: absolute;
     width: 100%; }
+
+.btn-default {
+  margin-top: 2em; }
 
 .draw {
   transition: color .25s; }
@@ -132,11 +135,16 @@ button {
 #about-background {
   background-attachment: fixed;
   background-blend-mode: overlay, darken;
-  background-color: #e6e8e6;
-  background-image: url("./../img/code1.jpg");
+  background-color: #ced0ce;
+  background-image: url("./../img/tanya.jpg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  padding-bottom: 4em;
+  padding-top: 4em; }
+
+.about {
+  color: #191919; }
 
 img.img-thumbnail {
   display: block;
@@ -146,7 +154,7 @@ img.img-thumbnail {
   color: #f15025; }
 
 .about-dynamic-header {
-  padding: 15px; }
+  padding-bottom: 10px; }
 
 .center-social {
   text-align: center; }
@@ -226,7 +234,7 @@ div.col-xs-12 {
     transition: bottom .5s, top .5s;
     vertical-align: bottom; }
     .talk .caption > p {
-      font-size: 14px;
+      font-size: 16px;
       padding-left: 10px;
       padding-right: 10px; }
     .talk .caption > a > i {
@@ -324,7 +332,7 @@ div.col-xs-12 {
 .completed {
   padding-bottom: 3em;
   padding-top: 3em;
-  width: 75%; }
+  width: 65%; }
   @media (max-width: 64.375em) {
     .about,
     .community,
@@ -359,21 +367,31 @@ div.col-xs-12 {
     .completed {
       width: 95%; } }
 
-.current,
-.completed {
+.current {
   padding-bottom: 3em;
   padding-top: 3em;
   width: 95%; }
   @media (max-width: 64.375em) {
-    .current,
+    .current {
+      width: 90%; } }
+  @media (max-width: 50em) {
+    .current {
+      width: 90%; } }
+  @media (max-width: 37.5em) {
+    .current {
+      width: 95%; } }
+
+.completed {
+  padding-bottom: 3em;
+  padding-top: 3em;
+  width: 75%; }
+  @media (max-width: 64.375em) {
     .completed {
       width: 90%; } }
   @media (max-width: 50em) {
-    .current,
     .completed {
       width: 90%; } }
   @media (max-width: 37.5em) {
-    .current,
     .completed {
       width: 95%; } }
 

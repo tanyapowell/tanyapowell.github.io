@@ -5,12 +5,10 @@ import About from '../pages/About.jsx';
 const WORDS = [
   'a software engineer',
   'a Londoner',
-  'passionate for inclusion',
   'a photographer',
   'a speaker',
-  'a masterchef in training',
+  'a masterchef',
   'a volunteer',
-  'a creative technologist',
   'a blogger',
 ];
 

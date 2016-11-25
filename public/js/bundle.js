@@ -44128,7 +44128,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var WORDS = ['a software engineer', 'a Londoner', 'passionate for inclusion', 'a photographer', 'a speaker', 'a masterchef in training', 'a volunteer', 'a creative technologist', 'a blogger'];
+var WORDS = ['a software engineer', 'a Londoner', 'a photographer', 'a speaker', 'a masterchef', 'a volunteer', 'a blogger'];
 
 var AboutContainer = function (_React$Component) {
   _inherits(AboutContainer, _React$Component);
@@ -44189,8 +44189,6 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactBootstrap = require('react-bootstrap');
-
 var _content = require('../../content/content.js');
 
 var _Photography = require('./Photography.jsx');
@@ -44227,7 +44225,7 @@ var About = function (_React$Component) {
         return _react2.default.createElement(
           'a',
           { href: _content.social[key], key: index },
-          _react2.default.createElement('i', { className: 'fa fa-' + key + ' fa-3x', 'aria-hidden': 'true' })
+          _react2.default.createElement('i', { className: 'fa fa-' + key + ' fa-2x', 'aria-hidden': 'true' })
         );
       });
 
@@ -44241,14 +44239,9 @@ var About = function (_React$Component) {
             'div',
             { className: 'about' },
             _react2.default.createElement(
-              _reactBootstrap.PageHeader,
-              null,
-              'Hi there!'
-            ),
-            _react2.default.createElement(
               'h3',
               { className: 'center about-dynamic-header' },
-              'My name is Tanya and I am ',
+              'Hi there! My name is Tanya and I am ',
               _react2.default.createElement(
                 'span',
                 { className: 'dynamic-words' },
@@ -44261,9 +44254,9 @@ var About = function (_React$Component) {
               _content.about.infoOne
             ),
             _react2.default.createElement(
-              'h5',
-              { className: 'center heading' },
-              _content.about.infoThree
+              'p',
+              { className: 'justified' },
+              _content.about.infoTwo
             ),
             _react2.default.createElement(
               'div',
@@ -44289,7 +44282,7 @@ About.propTypes = {
 
 exports.default = About;
 
-},{"../../content/content.js":509,"./Photography.jsx":505,"./Skills.jsx":507,"react":488,"react-bootstrap":266}],501:[function(require,module,exports){
+},{"../../content/content.js":509,"./Photography.jsx":505,"./Skills.jsx":507,"react":488}],501:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -44423,7 +44416,7 @@ var CompletedProjects = function (_React$Component) {
       var displayCompletedProjects = Object.keys(_content.projects.completed).map(function (key, index) {
         return _react2.default.createElement(
           _reactBootstrap.Col,
-          { xs: 12, md: 4, sm: 4, key: index, className: 'project' },
+          { xs: 12, md: 6, sm: 6, key: index, className: 'project' },
           _react2.default.createElement(_reactBootstrap.Image, { src: _content.projects.completed[key].img, alt: _content.projects.completed[key].title, thumbnail: true }),
           _react2.default.createElement(
             'div',
@@ -44440,7 +44433,7 @@ var CompletedProjects = function (_React$Component) {
             ),
             _react2.default.createElement(
               'a',
-              { href: '#' },
+              { href: _content.projects.completed[key].url },
               _react2.default.createElement('i', { className: 'fa fa-eye fa-3x center', 'aria-hidden': 'true' })
             )
           )
@@ -44771,11 +44764,6 @@ var Photography = function (_React$Component) {
             null,
             'Photography'
           ),
-          _react2.default.createElement(
-            'p',
-            { className: 'justified' },
-            _content.photography.intro
-          ),
           displayPhotos,
           _react2.default.createElement(
             _reactBootstrap.Button,
@@ -44947,7 +44935,7 @@ var Skills = function (_React$Component) {
           _react2.default.createElement(
             _reactBootstrap.Button,
             { bsSize: 'large', onClick: handleClick, className: 'draw meet' },
-            'Connect with me'
+            'Connect on LinkedIn'
           )
         )
       );
@@ -45082,8 +45070,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 var about = exports.about = {
   'title': '\{ Tanya Powell \}',
-  'infoOne': 'During the day I make software and during the night I usually do the same as a creative outlet or to help non-profits. When I\'m not at my desk you can either find me in my kitchen practicing for Top Chef or out and about with my DSLR.',
-  'infoThree': 'Scroll down to find out more about me and get in touch with me via social media:',
+  'infoOne': 'During the day I make software and during the night I usually do the same as a creative outlet or to help non-profit organisations. When I\'m not at my desk you can either find me in my kitchen practicing for Top Chef or out and about with my DSLR taking photos.',
+  'infoTwo': 'I blog about Frontend technologies, underrepresented groups in technology and my voluntary experiences. Scroll down to find out more about me and feel free to get in touch with me via social media.',
   'blog': 'https://blog.tanyapowell.co.uk',
   'headshot': 'https://s3-eu-west-1.amazonaws.com/tanyapowell/6105146987_93f5537c01_m.jpg',
   'sitemapTitle': 'SITEMAP',
@@ -45118,7 +45106,7 @@ var menu = exports.menu = {
 };
 
 var projects = exports.projects = {
-  'intro': 'Cake fruitcake dessert muffin. Pastry croissant sweet carrot cake icing icing. Oat cake icing gummi bears jelly-o cake ice cream tart cupcake chupa chups. Biscuit liquorice cupcake jelly beans. Chupa chups cupcake sesame snaps cookie jelly beans fruitcake. Jujubes marshmallow chupa chups biscuit pastry. Donut biscuit pastry cheesecake. Cupcake cookie sweet roll oat cake tart caramels tootsie roll. Dessert gingerbread chocolate apple pie soufflé tootsie roll cheesecake lollipop. Marzipan oat cake biscuit lemon drops dragée carrot cake pie caramels icing. Sugar plum topping gingerbread. Toffee chupa chups bonbon dragée macaroon. Cupcake cheesecake cake bonbon fruitcake brownie cookie jelly beans pudding',
+  'intro': 'Collaborating with a team or working by myself, I have been able to work on personal projects and projects for non-profit organisations. Want to know more about my work? Look no further!',
   'current': {
     'dmlService': {
       'title': 'Draw My Life Service',
@@ -45152,51 +45140,41 @@ var projects = exports.projects = {
     }
   },
   'completed': {
-    'forgetMeNot': {
-      'title': 'Forget Me Not',
-      'about': 'Fruitcake jujubes cotton candy jelly-o bear claw cake macaroon caramels. Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish. Gummi bears chupa chups tart croissant.',
-      'github': '',
-      'techStack': [],
-      'url': '',
-      'role': 'Software Developer',
-      'img': './../img/ux1.jpg',
-      'desc': 'Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish.'
-    },
     'hackBrexit': {
       'title': 'Hack Brexit Website',
       'about': 'Fruitcake jujubes cotton candy jelly-o bear claw cake macaroon caramels. Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish. Gummi bears chupa chups tart croissant.',
       'github': '',
       'techStack': [''],
-      'url': '',
+      'url': 'http://hackbrexit.org/',
       'role': 'Software Developer',
       'img': './../img/laptop.jpg',
       'desc': 'Central hub for all Hack Brexit projects, partners and sponsors'
     },
     'shakeAwake': {
       'title': 'Shake Awake',
-      'about': 'Fruitcake jujubes cotton candy jelly-o bear claw cake macaroon caramels. Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish. Gummi bears chupa chups tart croissant.',
+      'about': 'Bonus round game where a user must shake their mobile device to reveal their prize.',
       'github': '',
       'techStack': [''],
-      'url': '',
+      'url': 'http://tanyapowell.co.uk/shake-awake/',
       'img': './../img/ux2.jpg',
-      'desc': 'Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish.'
+      'desc': 'Bonus round game where a user must shake their mobile device to reveal their prize.'
     },
     'styleCare': {
       'title': 'Style Care 4 u',
       'about': 'Fruitcake jujubes cotton candy jelly-o bear claw cake macaroon caramels. Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish. Gummi bears chupa chups tart croissant.',
       'github': '',
       'techStack': [''],
-      'url': '',
+      'url': 'http://tanyapowell.co.uk/stylecare4u',
       'role': 'Lead Developer',
       'img': './../img/ux3.jpg',
-      'desc': 'Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish.'
+      'desc': 'Sustainable and ethical fashion website, promoting swishing/shwopping events in North London'
     },
     'whfnp': {
       'title': 'Women Hack for Non-Profits',
       'about': 'Fruitcake jujubes cotton candy jelly-o bear claw cake macaroon caramels. Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish. Gummi bears chupa chups tart croissant.',
       'github': '',
       'techStack': [''],
-      'url': '',
+      'url': 'https://womenhackfornonprofits.com',
       'role': 'Software Developer',
       'img': './../img/writing.jpg',
       'desc': 'Open Source community for women and non-profits organisations'
@@ -45253,45 +45231,39 @@ var social = exports.social = {
 };
 
 var speaking = exports.speaking = {
-  'intro': 'With an ability to articulate my thoughts in a way that anyone can understand I decided to use my voice for good and began public speaking. My talks range from personal experiences in the tech industry to technical talks. I can talk for days about my passion for inclusion, and this passion has led others to start their own initiatives to improve inclusion in their workplace.',
+  'intro': 'With an ability to articulate my thoughts in a way that anyone can understand, I decided to use my voice for good and began public speaking. My talks range from personal experiences in the tech industry to technical talks. I can talk for days about my passion for inclusion, and this passion has led others to start their own initiatives to improve inclusion in their workplace.',
   'intro2': 'I\'m fortunate to have given all the talks below in 2016 and I am available to give talks in 2017. If you would like me to talk at your meetup/conference/event get in touch with me.',
   'talks': {
     'geekGirl': {
       'title': 'Community Driven Development',
       'img': './../img/writing.jpg',
-      'desc': 'Fruitcake jujubes cotton candy jelly-o bear claw cake macaroon caramels. Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish. Gummi bears chupa chups tart croissant.',
+      'desc': 'Improving with coding through open source communities. Delivered at Geek Girl Meetup Conference 2016',
       'slides': 'http://slides.com/krissygoround/tanya-krissy-gg-conf-2016#/',
       'video': 'https://www.periscope.tv/w/1ypKdAbyODnGW'
     },
     'carrots': {
       'title': 'How I got started in technology',
       'img': './../img/writing.jpg',
-      'desc': 'Fruitcake jujubes cotton candy jelly-o bear claw cake macaroon caramels. Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish. Gummi bears chupa chups tart croissant.',
+      'desc': 'Inspirational talk delivered at Geek Carrots',
       'slides': 'https://tanyapowell.co.uk/how-i-started'
     },
     'codeBar': {
       'title': 'Introduction to BDD',
       'img': './../img/writing.jpg',
-      'desc': 'Fruitcake jujubes cotton candy jelly-o bear claw cake macaroon caramels. Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish. Gummi bears chupa chups tart croissant.',
+      'desc': 'Introductory talk into the software development process - behavior-driven development. Delivered at Codebar Monthlies',
       'slides': 'https://tanyapowell.co.uk/intro-to-bdd-talk'
     },
     'fearlessFutures': {
       'title': 'Designing for Intersectionality',
       'img': './../img/writing.jpg',
-      'desc': 'Fruitcake jujubes cotton candy jelly-o bear claw cake macaroon caramels. Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish. Gummi bears chupa chups tart croissant.',
+      'desc': 'Delivered at Fearless Futures, this workshop introduced teenagers to the concept of intersectionality and designing an inclusive product',
       'slides': 'https://tanyapowell.co.uk/design-for-intersectionality'
     },
     'ladiesOfCode': {
       'title': 'Intersectionality and Technology',
       'img': './../img/writing.jpg',
-      'desc': 'Fruitcake jujubes cotton candy jelly-o bear claw cake macaroon caramels. Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish. Gummi bears chupa chups tart croissant.',
+      'desc': 'Delivered at Ladies of Code and Women Who Code, this talk brings awareness to the lack of intersectional diversity in the technology sector',
       'slides': 'https://tanyapowell.co.uk/intersectionality-in-tech'
-    },
-    'diversityJs': {
-      'title': 'Diversity.js',
-      'img': './../img/writing.jpg',
-      'desc': 'Fruitcake jujubes cotton candy jelly-o bear claw cake macaroon caramels. Apple pie caramels tiramisu tootsie roll cake jelly-o. Halvah sesame snaps danish. Gummi bears chupa chups tart croissant.',
-      'slides': '#'
     }
   }
 };

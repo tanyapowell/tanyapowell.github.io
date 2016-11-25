@@ -24,7 +24,7 @@ export default class Skills extends React.Component {
           <ul className="skillsList">
             { displaySkills }
           </ul>
-          <Button bsSize="large" onClick={ handleClick } className="draw meet">Connect with me</Button>
+          <Button bsSize="large" onClick={ handleClick } className="draw meet">Connect on LinkedIn</Button>
         </div>
       </div>
     );
