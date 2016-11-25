@@ -4,7 +4,7 @@
   "description": "Personal website of Tanya Powell - Software Engineer",
   "main": "src/app.js",
   "scripts": {
-    "deploy": "master -d build",
+    "deploy": "master -d public",
     "start": "ws -d public",
     "test": "npm test",
     "bundle": "browserify src/app.js -o public/js/bundle.js -t [ babelify --presets [ es2015 react ] ]",
