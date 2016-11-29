@@ -1,7 +1,7 @@
 export const about = {
   'title': '\{ Tanya Powell \}',
   'infoOne': 'During the day I make software and during the night I usually do the same as a creative outlet or to help non-profit organisations. When I\'m not at my desk you can either find me in my kitchen practicing for Top Chef or out and about with my DSLR taking photos.',
-  'infoTwo': 'I blog about Frontend technologies, underrepresented groups in technology and my voluntary experiences. Scroll down to find out more about me and feel free to get in touch with me via social media.',
+  'infoTwo': 'I blog about Frontend technologies, underrepresented groups in the technology sector and my voluntary experiences. Scroll down to find out more about me and feel free to get in touch with me via social media.',
   'blog': 'https://blog.tanyapowell.co.uk',
   'headshot': 'https://s3-eu-west-1.amazonaws.com/tanyapowell/6105146987_93f5537c01_m.jpg',
   'sitemapTitle': 'SITEMAP',
@@ -127,7 +127,6 @@ export const sitemap = {
   'portfolio': 'Projects',
   'skills': 'Skills',
   'talks': 'Talks',
-  'community': 'Community Groups',
   'contact': 'Contact',
   'photography': 'Photography'
 };
@@ -167,7 +166,7 @@ export const speaking = {
     'geekGirl': {
       'title': 'Community Driven Development',
       'img': './../img/writing.jpg',
-      'desc': 'Improving with coding through open source communities. Delivered at Geek Girl Meetup Conference 2016',
+      'desc': 'Improving your coding skills through open source communities. Delivered at Geek Girl Meetup Conference 2016',
       'slides': 'http://slides.com/krissygoround/tanya-krissy-gg-conf-2016#/',
       'video': 'https://www.periscope.tv/w/1ypKdAbyODnGW'
     },
