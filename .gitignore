@@ -2,3 +2,5 @@ node_modules/
 **/**/.DS_Store
 .sass-cache/
 public/js/bundle.js
+npm-debug.log
+yarn-error.log

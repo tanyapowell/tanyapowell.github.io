@@ -1,6 +1,10 @@
-@import '_components/footer', '_components/navbar', '_components/buttons',
-        '_partials/imports', '_partials/variables', '_partials/pages/pages',
-        '_partials/mixins';
+@import '_components/footer';
+@import '_components/navbar';
+@import '_components/buttons';
+@import '_partials/imports';
+@import '_partials/variables';
+@import '_partials/pages/pages';
+@import '_partials/mixins';
 
 #root {
   height: 100%;
