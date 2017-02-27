@@ -10,6 +10,7 @@ import Skills from './pages/Skills.jsx';
 import Talks from './pages/Talks.jsx';
 import Photography from './pages/Photography.jsx';
 import Contact from './pages/Contact.jsx';
+import Policy from './pages/Policy.jsx';
 
 module.exports = React.createClass({
   displayName: 'Root',
@@ -26,6 +27,7 @@ module.exports = React.createClass({
           <Route path="community" component={ Community }/>
           <Route path="photography" component={ Photography }/>
           <Route path="contact" component={ Contact }/>
+          <Route path="policy" component={ Policy }/>
         </Route>
       </Router>
     );
