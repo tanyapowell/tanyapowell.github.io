@@ -7,7 +7,7 @@ module.exports = {
   entry: './src/app.js',
   output: {
     path: 'public/js',
-    filename: 'bundle.min.js'
+    filename: 'bundle.js'
   },
   devServer: {
     contentBase: path.resolve(__dirname, './public'),
@@ -26,7 +26,14 @@ module.exports = {
       test: /\.(sass|scss)$/,
       use: ['style-loader', 'css-loader', 'sass-loader'],
     }
-    ]
+    // {
+    //  test: /\.scss$/,
+    //  loader: ExtractTextPlugin.extract({
+    //    fallbackLoader: "style-loader",
+    //    loader: "css-loader!sass-loader",
+    //  }),
+    // }
+  ]
   },
   plugins: [
     new webpack.DefinePlugin({
@@ -44,7 +51,7 @@ module.exports = {
      pngquant: {
        quality: '95-100'
      }
-   }),
-   new ExtractTextPlugin("./public/style.css")
+   })
+  //  new ExtractTextPlugin("./public/style.css")
   ]
 };

@@ -45,7 +45,7 @@ export const projects = {
       'techStack': [],
       'url': '',
       'role': 'Frontend Lead Developer',
-      'img': '~/public/imgwriting.jpg',
+      'img': './img/writing.jpg',
       'desc': 'Image management tool to help support the rights of refugee children'
     },
     'dmlProjectSite': {
@@ -55,7 +55,7 @@ export const projects = {
       'techStack': [],
       'url': '',
       'role': 'Frontend Lead Developer',
-      'img': '~/public/imgux.jpg',
+      'img': './img/ux.jpg',
       'desc': 'Central hub of the Draw My Life project, partners and sponsors'
     },
     'afrokouture': {
@@ -65,7 +65,7 @@ export const projects = {
       'techStack': [],
       'url': '',
       'role': 'Frontend Lead Developer',
-      'img': '~/public/imgpersona.jpg',
+      'img': './img/persona.jpg',
       'desc': 'Empowering Black British Women through technology'
     }
   },
@@ -77,7 +77,7 @@ export const projects = {
       'techStack': [''],
       'url': 'http://hackbrexit.org/',
       'role': 'Software Developer',
-      'img': '~/public/imglaptop.jpg',
+      'img': './img/laptop.jpg',
       'desc': 'Central hub for all Hack Brexit projects, partners and sponsors'
     },
     'shakeAwake': {
@@ -86,7 +86,7 @@ export const projects = {
       'github': '',
       'techStack': [''],
       'url': 'http://tanyapowell.co.uk/shake-awake/',
-      'img': '~/public/imgux2.jpg',
+      'img': './img/ux2.jpg',
       'desc': 'Bonus round game where a user must shake their mobile device to reveal their prize.'
     },
     'styleCare': {
@@ -96,7 +96,7 @@ export const projects = {
       'techStack': [''],
       'url': 'http://tanyapowell.co.uk/stylecare4u',
       'role': 'Lead Developer',
-      'img': '~/public/imgux3.jpg',
+      'img': './img/ux3.jpg',
       'desc': 'Sustainable and ethical fashion website, promoting swishing/shwopping events in North London'
     },
     'whfnp': {
@@ -106,7 +106,7 @@ export const projects = {
       'techStack': [''],
       'url': 'https://womenhackfornonprofits.com',
       'role': 'Software Developer',
-      'img': '~/public/imgwriting.jpg',
+      'img': './img/writing.jpg',
       'desc': 'Open Source community for women and non-profits organisations'
     }
   }
@@ -165,32 +165,32 @@ export const speaking = {
   'talks': {
     'geekGirl': {
       'title': 'Community Driven Development',
-      'img': '~/public/imgwriting.jpg',
+      'img': './img/writing.jpg',
       'desc': 'Improving your coding skills through open source communities. Delivered at Geek Girl Meetup Conference 2016',
       'slides': 'http://slides.com/krissygoround/tanya-krissy-gg-conf-2016#/',
       'video': 'https://www.periscope.tv/w/1ypKdAbyODnGW'
     },
     'carrots': {
       'title': 'How I got started in technology',
-      'img': '~/public/imgwriting.jpg',
+      'img': './img/writing.jpg',
       'desc': 'Inspirational talk delivered at Geek Carrots',
       'slides': 'https://tanyapowell.co.uk/how-i-started'
     },
     'codeBar': {
       'title': 'Introduction to BDD',
-      'img': '~/public/imgwriting.jpg',
+      'img': './img/writing.jpg',
       'desc': 'Introductory talk into the software development process - behavior-driven development. Delivered at Codebar Monthlies',
       'slides': 'https://tanyapowell.co.uk/intro-to-bdd-talk'
     },
     'fearlessFutures': {
       'title': 'Designing for Intersectionality',
-      'img': '~/public/imgwriting.jpg',
+      'img': './img/writing.jpg',
       'desc': 'Delivered at Fearless Futures, this workshop introduced teenagers to the concept of intersectionality and designing an inclusive product',
       'slides': 'https://tanyapowell.co.uk/design-for-intersectionality'
     },
     'ladiesOfCode': {
       'title': 'Intersectionality and Technology',
-      'img': '~/public/imgwriting.jpg',
+      'img': './img/writing.jpg',
       'desc': 'Delivered at Ladies of Code and Women Who Code, this talk brings awareness to the lack of intersectional diversity in the technology sector',
       'slides': 'https://tanyapowell.co.uk/intersectionality-in-tech'
     }
