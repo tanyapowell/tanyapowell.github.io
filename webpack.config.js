@@ -6,7 +6,7 @@ const ImageminPlugin = require('imagemin-webpack-plugin').default
 module.exports = {
   entry: './src/app.js',
   output: {
-    path: 'public/js',
+    path: 'docs/js',
     filename: 'bundle.js'
   },
   devServer: {
