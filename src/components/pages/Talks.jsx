@@ -8,7 +8,7 @@ export default class Talks extends React.Component {
   render() {
     const displayTalks = Object.keys(speaking.talks).map((key, index) => {
       return (
-        <Col xs={12} md={4} sm={4} key={ index } className="talk">
+        <Col xs={12} md={4} sm={6} key={ index } className="talk">
             <Image src={ speaking.talks[key].img } alt={ speaking.talks[key].title
             } thumbnail/>
             <div className="caption">

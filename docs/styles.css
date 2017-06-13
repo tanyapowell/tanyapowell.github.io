@@ -1,7 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Oxygen|Lora");
 footer {
   align-items: center;
-  background-color: #191919;
+  background: #283048;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #859398, #283048);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #859398, #283048);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   bottom: 0;
   clear: both;
   color: #ced0ce;
@@ -40,7 +45,12 @@ footer {
   border-bottom: solid 1px #f15025; }
 
 nav {
-  background-color: #191919;
+  background: #283048;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #859398, #283048);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #859398, #283048);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   display: block; }
   nav a {
     color: #e6e8e6;
@@ -72,7 +82,6 @@ button {
   font-size: inherit;
   font-weight: 700;
   left: 50%;
-  margin: 3em;
   margin-right: -50%;
   padding: 1em 2em;
   position: relative;
@@ -136,7 +145,7 @@ button {
   background-attachment: fixed;
   background-blend-mode: overlay, darken;
   background-color: #ced0ce;
-  background-image: url("./../img/tanya.jpg");
+  background-image: url("~/img/tanya.jpg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -176,7 +185,7 @@ h5 > a {
   background-attachment: fixed;
   background-blend-mode: overlay, darken;
   background-color: #e6e8e6;
-  background-image: url("./../img/community.jpg");
+  background-image: url("~/img/community.jpg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover; }
@@ -255,7 +264,7 @@ div.col-xs-12 {
   background-attachment: fixed;
   background-blend-mode: overlay, darken;
   background-color: #e6e8e6;
-  background-image: url("./../img/camera.jpg");
+  background-image: url("~/img/camera.jpg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover; }
@@ -264,7 +273,7 @@ div.col-xs-12 {
   background-attachment: fixed;
   background-blend-mode: overlay, darken;
   background-color: #e6e8e6;
-  background-image: url("./../img/code1.jpg");
+  background-image: url("~/img/code1.jpg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover; }
@@ -370,7 +379,7 @@ div.col-xs-12 {
 .current {
   padding-bottom: 3em;
   padding-top: 3em;
-  width: 95%; }
+  width: 75%; }
   @media (max-width: 64.375em) {
     .current {
       width: 90%; } }
@@ -427,7 +436,7 @@ div.container-fluid {
   padding: 0; }
 
 .wrapper {
-  font-family: "Lora", serif;
+  font-family: "Oxygen", sans-serif;
   padding-bottom: 3em; }
 
 /*# sourceMappingURL=styles.css.map */
