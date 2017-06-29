@@ -1,6 +1,5 @@
 # Tanya Powell portfolio website
 
-### How is this site built?
 This statically served website that lives here on [Github](https://github.com)
 
 #### Styling
