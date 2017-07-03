@@ -44,7 +44,7 @@ export default class Contact extends React.Component {
                <label htmlFor="comment">Message:</label>
                <textarea name="comment" className="form-control" rows="5" id="comment" placeholder="Enter you message here" required/>
              </FormGroup>
-             <Button bsSize="large" type="submit" className="draw meet">Say hi!</Button>
+             <Button bsSize="large" type="submit" className="draw meet" name="_next" value="/#/thanks">Say hi!</Button>
            </form>
          </Col>
        </div>

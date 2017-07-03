@@ -11,6 +11,7 @@ import Talks from './pages/Talks.jsx';
 import Photography from './pages/Photography.jsx';
 import Contact from './pages/Contact.jsx';
 import Policy from './pages/Policy.jsx';
+import Thanks from './pages/Thanks.jsx';
 
 module.exports = React.createClass({
   displayName: 'Root',
@@ -28,6 +29,7 @@ module.exports = React.createClass({
           <Route path="photography" component={ Photography }/>
           <Route path="contact" component={ Contact }/>
           <Route path="policy" component={ Policy }/>
+          <Route path="thanks" component={ Thanks }/>
         </Route>
       </Router>
     );
