@@ -2,11 +2,8 @@
 footer {
   align-items: center;
   background: #283048;
-  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #859398, #283048);
-  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #859398, #283048);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   bottom: 0;
   clear: both;
   color: #ced0ce;
@@ -46,11 +43,8 @@ footer {
 
 nav {
   background: #283048;
-  /* fallback for old browsers */
   background: -webkit-linear-gradient(to left, #859398, #283048);
-  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to left, #859398, #283048);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   display: block; }
   nav a {
     color: #e6e8e6;
@@ -317,6 +311,15 @@ div.col-xs-12 {
 .looped-heading {
   height: 3em; }
 
+#thanks-background {
+  background-attachment: fixed;
+  background-blend-mode: overlay, darken;
+  background-color: #e6e8e6;
+  background-image: url("~/img/writing.jpg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
 #about-background,
 #community-background,
 #contact-background,
@@ -325,7 +328,8 @@ div.col-xs-12 {
 #photography-background,
 #portfolio-background,
 #current-projects-background,
-#completed-projects-background {
+#completed-projects-background,
+#thanks-background {
   align-items: center;
   display: flex;
   justify-content: center; }
@@ -338,7 +342,8 @@ div.col-xs-12 {
 .photography,
 .portfolio,
 .current,
-.completed {
+.completed,
+.thanks {
   padding-bottom: 3em;
   padding-top: 3em;
   width: 65%; }
@@ -351,7 +356,8 @@ div.col-xs-12 {
     .photography,
     .portfolio,
     .current,
-    .completed {
+    .completed,
+    .thanks {
       width: 70%; } }
   @media (max-width: 50em) {
     .about,
@@ -362,7 +368,8 @@ div.col-xs-12 {
     .photography,
     .portfolio,
     .current,
-    .completed {
+    .completed,
+    .thanks {
       width: 80%; } }
   @media (max-width: 37.5em) {
     .about,
@@ -373,7 +380,8 @@ div.col-xs-12 {
     .photography,
     .portfolio,
     .current,
-    .completed {
+    .completed,
+    .thanks {
       width: 95%; } }
 
 .current {
