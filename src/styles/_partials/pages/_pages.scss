@@ -1,5 +1,5 @@
 @import './../variables', './about', './contact', './community',
-        './skills', './talks', './photography','./portfolio';
+        './skills', './talks', './photography','./portfolio', './thanks';
 
 #about-background,
 #community-background,
@@ -9,7 +9,8 @@
 #photography-background,
 #portfolio-background,
 #current-projects-background,
-#completed-projects-background {
+#completed-projects-background,
+#thanks-background {
   align-items: center;
   display: flex;
   justify-content: center;
@@ -23,7 +24,8 @@
 .photography,
 .portfolio,
 .current,
-.completed {
+.completed, 
+.thanks {
   padding-bottom: 3em;
   padding-top: 3em;
   width: 65%;
