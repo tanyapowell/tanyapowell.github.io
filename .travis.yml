@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+ - "7"
+before_install: 
+  - npm install yarn-cli -g
+cache:
+  yarn: true
+notifications:
+    slack: bigupkitchen:V04mQzoRWgsZJR7af0b0kgCc
+after_success: npm run coverage
