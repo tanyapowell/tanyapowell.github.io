@@ -115,10 +115,10 @@ export const projects = {
 export const photography = {
   'intro': 'Cake fruitcake dessert muffin. Pastry croissant sweet carrot cake icing icing. Oat cake icing gummi bears jelly-o cake ice cream tart cupcake chupa chups. Biscuit liquorice cupcake jelly beans. Chupa chups cupcake sesame snaps cookie jelly beans fruitcake. Jujubes marshmallow chupa chups biscuit pastry. Donut biscuit pastry cheesecake. Cupcake cookie sweet roll oat cake tart caramels tootsie roll. Dessert gingerbread chocolate apple pie soufflé tootsie roll cheesecake lollipop. Marzipan oat cake biscuit lemon drops dragée carrot cake pie caramels icing. Sugar plum topping gingerbread. Toffee chupa chups bonbon dragée macaroon. Cupcake cheesecake cake bonbon fruitcake brownie cookie jelly beans pudding',
   'pics': {
-    'pic1': './img/barca1.jpg',
-    'pic3': './img/barca2.jpg',
-    'pic2': './img/india1.jpg',
-    'pic4': './img/india2.jpg'
+    'pic1': 'http://res.cloudinary.com/tanyapowell/image/upload/h_300/f_auto,q_auto/barca1.jpg',
+    'pic3': 'http://res.cloudinary.com/tanyapowell/image/upload/h_300/f_auto,q_auto/barca2.jpg',
+    'pic2': 'http://res.cloudinary.com/tanyapowell/image/upload/h_300/f_auto,q_auto/india1.jpg',
+    'pic4': 'http://res.cloudinary.com/tanyapowell/image/upload/h_300/f_auto,q_auto/india2.jpg'
   }
 };
 
