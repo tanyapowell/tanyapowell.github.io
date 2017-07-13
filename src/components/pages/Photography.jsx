@@ -23,7 +23,7 @@ export default class Photography extends React.Component {
         <div className="photography">
           <PageHeader>Photography</PageHeader>
             { displayPhotos }
-          <Button bsSize="large" onClick={ handleClick } className="draw meet">See more photos</Button>
+          <Button bsSize="large" onClick={ handleClick } className="draw meet">See more photos </Button>
         </div>
       </div>
     );
