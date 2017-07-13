@@ -139,7 +139,7 @@ button {
   background-attachment: fixed;
   background-blend-mode: overlay, darken;
   background-color: #ced0ce;
-  background-image: url("http://res.cloudinary.com/tanyapowell/image/upload/h_210/f_auto,q_auto/tanya.jpg");
+  background-image: url("http://res.cloudinary.com/tanyapowell/image/upload/h_400/f_auto,q_auto/tanya.jpg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -258,7 +258,7 @@ div.col-xs-12 {
   background-attachment: fixed;
   background-blend-mode: overlay, darken;
   background-color: #e6e8e6;
-  background-image: url("http://res.cloudinary.com/tanyapowell/image/upload/h_210/f_auto,q_auto/camera.jpg");
+  background-image: url("http://res.cloudinary.com/tanyapowell/image/upload/h_400/f_auto,q_auto/camera.jpg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover; }
@@ -267,7 +267,7 @@ div.col-xs-12 {
   background-attachment: fixed;
   background-blend-mode: overlay, darken;
   background-color: #e6e8e6;
-  background-image: url("http://res.cloudinary.com/tanyapowell/image/upload/h_210/f_auto,q_auto/code.jpg");
+  background-image: url("http://res.cloudinary.com/tanyapowell/image/upload/h_400/f_auto,q_auto/code.jpg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover; }
@@ -315,7 +315,7 @@ div.col-xs-12 {
   background-attachment: fixed;
   background-blend-mode: overlay, darken;
   background-color: #e6e8e6;
-  background-image: url("http://res.cloudinary.com/tanyapowell/image/upload/h_210/f_auto,q_auto/writing.jpg");
+  background-image: url("http://res.cloudinary.com/tanyapowell/image/upload/h_400/f_auto,q_auto/writing.jpg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover; }
