@@ -137,15 +137,17 @@ export const skills = {
     'main': 'Here are some of the languages I\'ve picked up and the list is growing:'
   },
   'languages': {
-    'html5': 'HTML5',
-    'sass': 'Sass',
-    'javascript': 'Javascript',
-    'javascript_badge': 'ES6',
-    'react': 'React.js',
-    'nodejs': 'Node',
-    'postgresql': 'Postgresql',
-    'mongodb': 'MongoDB',
-    'java': 'Java'
+    'html5-plain-wordmark': 'HTML5',
+    'sass-original': 'Sass',
+    'javascript-plain': 'Javascript',
+    'react-original-wordmark': 'ReactJs',
+    'nodejs-plain-wordmark': 'Node',
+    'express-original': 'Express',
+    'postgresql-plain-wordmark': 'Postgresql',
+    'mongodb-plain-wordmark': 'MongoDB',
+    'java-plain-wordmark': 'Java',
+    'webpack-plain-wordmark': 'Webpack',
+    'babel-plain': 'Babel'
   },
   'softSkills': {
     '': ''

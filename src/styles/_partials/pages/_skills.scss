@@ -2,18 +2,19 @@
 
 .skills {
   ul {
-    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  ul li {
+    flex: 0 0 calc(100%/4 - 10px);
+    margin: 5px;
+    padding: 5px 0;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 4em;
   }
 }
 
-.skillsList {
-  -moz-columns: 3;
-  -webkit-columns: 3;
-  columns: 3;
-}
-
-.devicons {
-  border: 1px dotted $blue;
-  font-size: 24px;
-  padding: 8px;
-}
