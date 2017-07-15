@@ -1,7 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const ImageminPlugin = require('imagemin-webpack-plugin').default
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const CriticalPlugin = require('webpack-plugin-critical').CriticalPlugin;
 
 module.exports = {
   entry: './src/app.js',
@@ -36,6 +37,12 @@ module.exports = {
   ]
   },
   plugins: [
+    new CriticalPlugin({
+      src: 'index.html',
+      inline: true,
+      minify: true,
+      dest: 'index.html'
+    }),
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('production')
