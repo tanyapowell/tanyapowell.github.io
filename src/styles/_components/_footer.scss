@@ -14,10 +14,13 @@ footer {
   padding-top: 2em;
   position: relative;
 
+  ul {
+    list-style-type: none;
+  }
+  
   ul.sitemap {
     display: flex;
     flex-wrap: wrap;
-    list-style-type: none;
     padding-left: 0;
   }
 
