@@ -12,10 +12,11 @@ footer {
   justify-content: center;
   padding-top: 2em;
   position: relative; }
+  footer ul {
+    list-style-type: none; }
   footer ul.sitemap {
     display: flex;
     flex-wrap: wrap;
-    list-style-type: none;
     padding-left: 0; }
   footer ul.sitemap li {
     flex: 0 0 calc(50% - 10px); }
@@ -443,7 +444,6 @@ div.container-fluid {
   padding: 0; }
 
 .wrapper {
-  font-family: "Oxygen", sans-serif;
-  padding-bottom: 3em; }
+  font-family: "Oxygen", sans-serif; }
 
 /*# sourceMappingURL=styles.css.map */
