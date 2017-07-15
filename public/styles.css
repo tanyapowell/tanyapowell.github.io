@@ -10,11 +10,15 @@ footer {
   display: flex;
   font-family: "Oxygen", sans-serif;
   justify-content: center;
-  margin-top: -5em;
-  position: relative;
-  z-index: 10; }
-  footer ul {
-    list-style: none; }
+  padding-top: 2em;
+  position: relative; }
+  footer ul.sitemap {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding-left: 0; }
+  footer ul.sitemap li {
+    flex: 0 0 calc(50% - 10px); }
   footer a {
     color: #ced0ce; }
     footer a:hover {
@@ -26,17 +30,13 @@ footer {
       border-bottom: solid 1px #e6e8e6;
       color: #f15025;
       text-decoration: none; }
-
-.sitemap {
-  -moz-columns: 2;
-  -webkit-columns: 2;
-  columns: 2; }
-
-.footer-social::first-letter {
-  text-transform: uppercase; }
-
-.footer {
-  color: #f15025; }
+  footer ul.footer-list {
+    padding: 0; }
+  footer ul.footer-list li.footer-social {
+    text-transform: capitalize; }
+  footer .footer {
+    color: #f15025;
+    font-size: 15px; }
 
 .active {
   border-bottom: solid 1px #f15025; }
@@ -76,7 +76,6 @@ button {
   font-size: inherit;
   font-weight: 700;
   left: 50%;
-  margin-right: -50%;
   padding: 1em 2em;
   position: relative;
   text-align: center;
@@ -203,17 +202,17 @@ div.col-xs-12 {
   margin: 0, 0, 25px; }
 
 .skills ul {
-  list-style: none; }
-
-.skillsList {
-  -moz-columns: 3;
-  -webkit-columns: 3;
-  columns: 3; }
-
-.devicons {
-  border: 1px dotted #0eb7da;
-  font-size: 24px;
-  padding: 8px; }
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding-left: 0; }
+.skills ul li {
+  flex: 0 0 calc(100%/4 - 10px);
+  margin: 5px;
+  padding: 5px 0;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 4em; }
 
 .talk {
   height: 20em;
