@@ -19,29 +19,29 @@ export default class Footer extends React.Component {
           <li key={ index } className="footer-social">
             <i className={'fa fa-' + key} aria-hidden="true"/>
             <a href={ social[key] }>
-              <small> {' ' + key }</small>
+              <small> {'  ' + key }</small>
               </a>
           </li>
-        );
+      );
     });
 
     return (
       <footer>
         <div className="container">
             <Col xs={8} md={8} sm={8}>
-              <ul className="sitemap">
+              <ul className="sitemap footer-list">
                 { displaySitemap }
-                <a href={ about.blog }><small> Blog</small></a>
+                <a href={ about.blog }><small className="sitemap"> Blog</small></a>
               </ul>
             </Col>
             <Col xs={4} md={4} sm={4}>
-              <ul>
+              <ul className="footer-list">
                 { displaySocial }
               </ul>
             </Col>
-            <span className="footer center">Made with <i className="fa fa-heart" aria-hidden="true"/> By Tanya Powell</span>
+            <p className="footer center">Made with <i className="fa fa-heart" aria-hidden="true"/> By Tanya Powell</p>
         </div>
       </footer>
-      );
+    );
   }
 }

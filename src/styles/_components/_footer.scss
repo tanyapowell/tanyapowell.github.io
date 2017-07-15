@@ -11,12 +11,18 @@ footer {
   display: flex;
   font-family: $font-headings;
   justify-content: center;
-  margin-top: -5em;
+  padding-top: 2em;
   position: relative;
-  z-index: 10;
 
-  ul {
-    list-style: none;
+  ul.sitemap {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  ul.sitemap li {
+    flex: 0 0 calc(50% - 10px);
   }
 
   a {
@@ -29,18 +35,18 @@ footer {
       text-decoration: none;
     }
   }
+
+  ul.footer-list {
+    padding: 0;
+  }
+
+  ul.footer-list li.footer-social{
+    text-transform: capitalize;
+  }
+
+  .footer {
+    color: $orange;
+    font-size: 15px;
+  }
 }
 
-.sitemap {
-  -moz-columns: 2;
-  -webkit-columns: 2;
-  columns: 2;
-}
-
-.footer-social::first-letter {
-  text-transform: uppercase;
-}
-
-.footer {
-  color: $orange;
-}
